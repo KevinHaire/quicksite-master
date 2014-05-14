@@ -13,7 +13,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/setup.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/css/setup.min.css"/>
 	<title>Custom Website Setup</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
 	</form>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src='http://www.shopcitywebsites.com/assets/spectrum.js'></script>
+	<script src='http://www.shopcitywebsites.com/assets/js/spectrum.js'></script>
 
 </body>
 </html>

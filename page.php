@@ -2,6 +2,7 @@
 if (!isset($_GET["page"])) {
 	header('Location: index.php');
 }
+include $masterPath.'/config/_array.php';
 include $masterPath.'/config/_vars.php';
 include $masterPath.'/inc/_redirect.php';
 ?>

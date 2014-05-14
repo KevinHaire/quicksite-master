@@ -1163,8 +1163,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 @font-face {
   font-family: 'hero';
-  src: url("../setup/fonts/hero-webfont.eot");
-  src: url("../setup/fonts/hero-webfont.eot?#iefix") format("embedded-opentype"), url("../setup/fonts/hero-webfont.woff") format("woff"), url("../setup/fonts/hero-webfont.ttf") format("truetype"), url("../setup/fonts/hero-webfont.svg#heroregular") format("svg");
+  src: url("http://www.shopcitywebsites.com/assets/fonts/hero-webfont.eot");
+  src: url("http://www.shopcitywebsites.com/assets/fonts/hero-webfont.eot?#iefix") format("embedded-opentype"), url("http://www.shopcitywebsites.com/assets/fonts/hero-webfont.woff") format("woff"), url("http://www.shopcitywebsites.com/assets/fonts/hero-webfont.ttf") format("truetype"), url("http://www.shopcitywebsites.com/assets/fonts/hero-webfont.svg#heroregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }

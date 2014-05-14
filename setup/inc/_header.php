@@ -1,3 +1,3 @@
 	<header class="mainHeader">
-		<img src="images/shopCity.png" />
+		<img src="http://www.shopcitywebsites.com/assets/images/shopCity.png" />
 	</header>

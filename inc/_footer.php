@@ -39,10 +39,10 @@
 <!-- END OF FOOTER CONTENT -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://www.<?php echo $shopDomain; ?>/webtools/script/all.js.cfm"></script>
-<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/script.build.js"></script>
+<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/script.build.js"></script>
 <?php
 	if ($enableSlider == "true") {
-		echo '<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/jquery.nivo.slider.js"></script>'.chr(13).chr(10).
+		echo '<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/jquery.nivo.slider.js"></script>'.chr(13).chr(10).
 				 '<script>$("#slider").nivoSlider();</script>'.chr(13).chr(10);
 	}
 ?>

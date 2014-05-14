@@ -17,22 +17,22 @@
 					<span><?php echo $bizPhone; ?></span>
 					<?php
 						if ($facebookLink) {
-							echo '<a href="'.$facebookLink.'" target="_blank"><img src="images/iconFb.png" alt=""></a>';
+							echo '<a href="'.$facebookLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconFb.png" alt=""></a>';
 						}
 						if ($twitterLink) {
-							echo '<a href="'.$twitterLink.'" target="_blank"><img src="images/iconTw.png" alt=""></a>';
+							echo '<a href="'.$twitterLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconTw.png" alt=""></a>';
 						}
 						if ($instagramLink) {
-							echo '<a href="'.$instagramLink.'" target="_blank"><img src="images/iconIg.png" alt=""></a>';
+							echo '<a href="'.$instagramLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconIg.png" alt=""></a>';
 						}
 						if ($pinterestLink) {
-							echo '<a href="'.$pinterestLink.'" target="_blank"><img src="images/iconPt.png" alt=""></a>';
+							echo '<a href="'.$pinterestLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconPt.png" alt=""></a>';
 						}
 						if ($googleLink) {
-							echo '<a href="'.$googleLink.'" target="_blank"><img src="images/iconGp.png" alt=""></a>';
+							echo '<a href="'.$googleLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconGp.png" alt=""></a>';
 						}
 						if ($shopLink) {
-							echo '<a href="'.$shopLink.'" target="_blank"><img src="images/iconSc.png" alt=""></a>';
+							echo '<a href="'.$shopLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconSc.png" alt=""></a>';
 						}
 					?>
 					<div class="newsletterContainer">
