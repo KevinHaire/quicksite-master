@@ -1,0 +1,217 @@
+@import 'libs/normalize';
+@import 'libs/nivoTheme';
+@import 'libs/nivoSlider';
+@import 'bits';
+
+/***********
+GLOBAL
+***********/
+
+html {
+	background:#ffffff;
+	height:100%;
+}
+
+body {
+	font-size:14px;
+	font-family:arial, sans-serif;
+	color:#646464;
+}
+
+h1 {
+	font-size:22px;
+	color:#3b97dc;
+}
+
+
+
+/***********
+HEADER
+***********/
+
+.mainHeader {
+	width:100%;
+	height:170px;
+}
+
+.headerTop {
+	// @include background(linear-gradient(bottom, #e1e0e0, #f7f7f7, #e1e0e0));
+	background-image:linear-gradient(to bottom, #e1e0e0, #f7f7f7, #e1e0e0);
+	width:100%;
+	height:120px;
+}
+
+.headerLeft {
+	width:66.666666%;
+	min-height:1px;
+	height:100%;
+	float:left;
+	padding-right:15px;
+	img {
+		max-width:100%;
+		max-height:100%;
+	}
+}
+
+//SOCIAL MEDIA LINKS
+.newsletterContainer {
+	float:right;
+	width:185px;
+	height:30px;
+	overflow:hidden;
+	margin-left:10px;
+}
+
+.headerRight {
+	width:33.333333%;
+	min-height:1px;
+	float:left;
+	height:100%;
+	text-align:right;
+	padding-top:45px;
+	img {
+		margin-left:8px;
+	}
+	span {
+		position:absolute;
+		right:0;
+		top:5px;
+		font-size:28px;
+		font-weight:100 !important;
+	}
+}
+
+//NAV COLORS
+$navColor:       #3b97dc;
+$lightNavColor:  lighten($navColor, 5%);
+$darkNavColor:   darken($navColor, 5%);
+$darkerNavColor: darken($darkNavColor, 5%);
+
+.mainNav {
+	background-image:linear-gradient(to bottom, $navColor 25px, $lightNavColor 25px);
+	height:50px;
+	ul {
+		font-size:0px;
+		display:inline-block;
+		li {
+			height:50px;
+			display:inline-block;
+			border-right:1px solid $navColor;
+			border-left:1px solid $lightNavColor;
+			&:hover {
+				background-image:linear-gradient(to bottom, $darkNavColor 25px, $darkerNavColor 25px);
+			}
+			&:first-child {
+				border-left:0;
+			}
+			&:last-child {
+				border-right:0;
+			}
+			a {
+				color:#ffffff;
+				line-height:50px;
+				text-decoration:none;
+				display:block;
+				font-size:16px;
+			}
+		}
+	}
+}
+
+
+
+
+/***********
+MAIN CONTENT
+***********/
+
+.mainContent {
+	width:900px;
+	margin: 0 auto;
+	// overflow:hidden;
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+}
+
+.about, .newsfeed {
+	float:left;
+}
+
+.about {
+	width:66.666666%;
+	padding:15px 15px 15px 0;
+	img {
+		max-width:100%;
+		max-height:400px;
+	}
+}
+
+.slider-wrapper {
+	max-width:100%;
+	max-height:400px;
+}
+
+.newsfeed {
+	width:33.333333%;
+	background:#f4f4f4;
+	padding:15px;
+}
+
+.padding {
+	padding:20px 0px;
+}
+
+
+
+/***********
+FOOTER
+***********/
+
+.mainFooter {
+	width:100%;
+	min-height:150px;
+	background:#e1e1e1;
+	text-align:center;
+	padding:20px 0 15px 0;
+	ul {
+		margin-bottom:20px;
+		li {
+			display:inline;
+			padding:0 10px;
+			border-right:1px solid #828282;
+			color:#828282;
+			&:last-child {
+				border:0;
+				padding-right:0;
+			}
+			a {
+				color:#828282;
+				text-decoration:none;
+			}
+		}
+	}
+}
+
+.copyright {
+}
+
+.poweredBy {
+	width:150px;
+	margin:10px auto;
+	span {
+		font-size:12px;
+	}
+}
+
+
+
+
+
+.nivoSlider {
+	img {
+		width:100%;
+	}
+}

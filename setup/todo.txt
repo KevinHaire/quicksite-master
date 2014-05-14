@@ -1,0 +1,30 @@
+----MARCH 19TH 2014----
+//- build function for image uploads
+	//- loop through one function for all image uploads
+- setup error email
+- show error if something goes wrong with file upload
+	- (file too big, wrong file type)
+- fix analytics
+	- breaks array when code is saved
+
+
+
+//- force auto style on all webtools
+//- choose font (websafe fonts)
+//- add google analytics
+	//- <script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-4385413-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+		</script>
+
+//- put text size choices in dropdown
+//- put checkbox for banner
+//- add google +
+//- make default template with social media links to themselves
+//- add biz phone number to top right
+- CLEAN UP!

@@ -1,0 +1,265 @@
+@import 'libs/normalize';
+
+/************
+MIXINS
+************/
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1000px) { transition:all .7s ease; @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 650px) { transition:all .7s ease; @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 515px)  { transition:all .7s ease; @content; }
+  }
+}
+
+
+
+/************
+GLOBAL
+************/
+
+html {
+	background:#ffffff;
+}
+
+body {
+	font-family:hero;
+	font-size:18px;
+}
+
+a {
+	color:#1663ca;
+	text-decoration:none;
+}
+
+p {
+	padding:15px 0;
+}
+
+.error {
+  width:900px;
+  padding:80px 15px;
+  background:#f4f4f4;
+  text-align:center;
+  margin:0 auto;
+}
+
+input, select, textarea, .bannerInputContainer {
+	width:50%;
+	display:block;
+	margin:auto;
+	margin-bottom:1em;
+	@include breakpoint(mama-bear) {
+		width:80%;
+	}
+	@include breakpoint(baby-bear) {
+		width:95%;
+		margin-bottom:1.5em;
+	}
+}
+
+input[type="color"] {
+	width:100% !important;
+}
+
+
+
+
+.enableSlider {
+	margin-bottom:4%;
+}
+
+.enableSliderCb {
+	width:20px;
+	margin:auto;
+}
+
+
+
+
+
+
+
+.bannerInputContainer {
+	margin:auto;
+}
+
+.enableBanner {
+	float:left;
+	width:10%;
+	margin-top:4px;
+}
+
+.bannerImgLink {
+	float:left;
+	width:90%;
+}
+
+
+label {
+	width:100%;
+	display:block;
+	margin-bottom:1%;
+}
+
+.navigation {
+	input[type="checkbox"] {
+		width:20px;
+		display:inline;
+	}
+}
+
+.contain {
+	width:1000px;
+	margin:auto;
+	@include breakpoint(papa-bear) {
+		width:100%;
+	}
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+}
+
+section {
+	text-align:center;
+	h2 {
+		font-family:hero;
+		font-size:24px;
+		padding:20px 0;
+		color:#1663ca;
+	}
+	h3 {
+		font-family:hero;
+		font-size:22px;
+		padding:10px 0;
+		color:#808080;
+	}
+	h4 {
+		font-family:hero;
+		font-size:18px;
+		padding:10px 0;
+		color:#808080;
+	}
+}
+
+.left, .right {
+	float:left;
+	width:50%;
+	@include breakpoint(baby-bear) {
+		width:100%;
+	}
+}
+
+.submit {
+	margin:auto;
+	width:200px;
+	padding:20px 0px;
+}
+
+
+
+
+/************
+HEADER
+************/
+
+#password {
+	width:25%;
+	@include breakpoint(mama-bear) {
+		width:80%;
+	}
+	@include breakpoint(baby-bear) {
+		width:95%;
+	}
+}
+
+.mainHeader {
+	text-align:center;
+	background:#ffffff;
+	border-bottom:2px solid #808080;
+	img {
+		margin:20px 0;
+		max-width:100%;
+		width:300px;
+	}
+}
+
+form {
+	section {
+		&:nth-of-type(odd) {
+			background:#f4f4f4;
+		}
+	}
+}
+
+
+/************
+FOOTER
+************/
+
+.mainFooter {
+	background:#f4f4f4;
+	// background:#ffffff;
+	padding:20px 0px 40px 0px;
+}
+
+
+
+
+/************
+HEADER
+************/
+
+.success {
+	width:50%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	margin:auto;
+	background:#ffffff;
+	border:1px solid #808080;
+	border-top:0;
+	text-align:center;
+	p {
+		margin:60px 0px;
+	}
+	a {
+		position:absolute;
+		bottom:15px;
+		left:0;
+		right:0;
+		margin:auto;
+		background:#808080;
+		border:1px solid #000000;
+		padding:5px 0;
+		width:100px;
+		color:#ffffff;
+	}
+}
+
+
+
+/************
+MIXINS / FONTS
+************/
+@import 'libs/spectrum';
+
+
+
+@font-face {
+	font-family: 'hero';
+	src: url('../setup/fonts/hero-webfont.eot');
+	src: url('../setup/fonts/hero-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../setup/fonts/hero-webfont.woff') format('woff'),
+	     url('../setup/fonts/hero-webfont.ttf') format('truetype'),
+	     url('../setup/fonts/hero-webfont.svg#heroregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
