@@ -5,17 +5,30 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     uglify: {
-      build: {
-        src: ['js/libs/*.js', 'js/script.js'],
-        dest: 'js/build/script.build.js'
+      my_target: {
+        files: {
+           'setup/js/build/script.build.js':['setup/js/libs/*.js', 'setup/js/*.js'],
+           'js/build/script.build.js':['js/libs/*.js', 'js/script.js']
+        }
       }
     },
 
+    // concat: {
+    //   options: {
+    //     separator: ';',
+    //   },
+    //   files: {
+    //      'setup/js/build/script.build.js':['setup/js/libs/*.js', 'setup/js/*.js'],
+    //      'js/build/script.build.js':['js/libs/*.js', 'js/script.js']
+    //   }
+    // },
+
     concat: {
-      options: {
-        separator: ';',
+      basic: {
+        src: ['setup/js/libs/*.js', 'setup/js/*.js'],
+        dest: 'setup/js/build/script.build.js',
       },
-      dist: {
+      extras: {
         src: ['js/libs/*.js', 'js/script.js'],
         dest: 'js/build/script.build.js',
       },
