@@ -1,31 +1,46 @@
 		<section class="navigation">
 			<div class="contain">
-				<h2>Navigation</h2>
-				<div class="left">
-					<label for="aboutUsNav">About Us</label>
-				  <input type="checkbox" name="aboutUsNav" id="aboutUsNav" <?php if ($aboutUsNav == "true"){echo "checked";} ?> /><br>
-					<label for="menuNav">Menu</label>
-				  <input type="checkbox" name="menuNav" id="menuNav" <?php if ($menuNav == "true"){echo "checked";} ?> /><br>
-					<label for="couponsNav">Coupons</label>
-				  <input type="checkbox" name="couponsNav" id="couponsNav" <?php if ($couponsNav == "true"){echo "checked";} ?> /><br>
-					<label for="eventsNav">Events</label>
-				  <input type="checkbox" name="eventsNav" id="eventsNav" <?php if ($eventsNav == "true"){echo "checked";} ?> /><br>
-					<label for="newsletterNav">Newsletter</label>
-				  <input type="checkbox" name="newsletterNav" id="newsletterNav" <?php if ($newsletterNav == "true"){echo "checked";} ?> /><br>
-					<label for="contactNav">Contact</label>
-				  <input type="checkbox" name="contactNav" id="contactNav" <?php if ($contactNav == "true"){echo "checked";} ?> /><br>
-				</div>
-				<div class="right">
-					<label for="photosNav">Photos</label>
-				  <input type="checkbox" name="photosNav" id="photosNav" <?php if ($photosNav == "true"){echo "checked";} ?> /><br>
-					<label for="marketplaceNav">Store</label>
-				  <input type="checkbox" name="marketplaceNav" id="marketplaceNav" <?php if ($marketplaceNav == "true"){echo "checked";} ?> /><br>
-					<label for="giftCertificateNav">Gift Cards</label>
-				  <input type="checkbox" name="giftCertificateNav" id="giftCertificateNav" <?php if ($giftCertificateNav == "true"){echo "checked";} ?> /><br>
-					<label for="reviewsNav">Reviews</label>
-				  <input type="checkbox" name="reviewsNav" id="reviewsNav" <?php if ($reviewsNav == "true"){echo "checked";} ?> /><br>
-					<label for="blogNav">Blog</label>
-				  <input type="checkbox" name="blogNav" id="blogNav" <?php if ($blogNav == "true"){echo "checked";} ?> /><br>
+				<ul class="navItems">
+					<h2>Navigation</h2>
+					<?php 
+
+						$navItems = explode(',', $navOptions);
+						$navObjects = array();
+
+						for ($i=0; $i < sizeof($navItems) ; $i++) { 
+							$temp = explode('|', $navItems[$i]);
+							$newNav = array();
+							$newNav['title'] = $temp[0];
+							$newNav['position'] = $temp[1];
+							$newNav['type'] = $temp[2];
+							$newNav['parameters'] = $temp[3];
+							array_push($navObjects, $newNav);
+						}
+
+						for ($i=0; $i < sizeof($navObjects); $i++) { 
+							echo
+							'<li class="navItem nav_'.$i.'">'.chr(13).
+								'<div class="exit"></div>'.chr(13).
+								'<label for="">Title:</label>'.chr(13).
+								'<input value="'.$navObjects[$i]['title'].'" id="title'.$i.'" data-id="'.$i.'" type="text" />'.chr(13).
+								// '<label for="">Position:</label>'.chr(13).
+								// '<input value="'.$navObjects[$i]['position'].'" id="position'.$i.'" data-id="'.$i.'" type="number" name="" />'.chr(13).
+								'<label for="">Type:</label>'.chr(13).
+								'<select id="type'.$i.'" data-id="'.$i.'" type="select" name="">'.chr(13).
+									'<option value="webpage">Webpage</option>'.chr(13).
+									'<option value="marketplace">Marketplace</option>'.chr(13).
+								'</select>'.chr(13).
+								'<label for="">Parameters:</label>'.chr(13).
+								'<input value="'.$navObjects[$i]['parameters'].'" id="parameters'.$i.'" data-id="'.$i.'" type="text" />'.chr(13).
+								'<input id="hidden'.$i.'" data-id="'.$i.'" type="hidden" name="navOptions[]" value="'.$navObjects[$i]['title'].'|'.$navObjects[$i]['position'].'|'.$navObjects[$i]['type'].'|'.$navObjects[$i]['parameters'].'" />'.chr(13).
+							'</li>';
+						}
+
+					?>
+
+				</ul>
+				<div>
+					<button class="newNav">New Nav Item</button>
 				</div>
 			</div>
 		</section>

@@ -1,4 +1,18 @@
 <?php
+
+$navObjects = array();
+
+for ($i=0; $i < sizeof($_POST['navOptions']) ; $i++) { 
+	$temp = explode('|', $_POST['navOptions'][$i]);
+	$newNav = array();
+	$newNav['title'] = $temp[0];
+	$newNav['position'] = $temp[1];
+	$newNav['type'] = $temp[2];
+	$newNav['parameters'] = $temp[3];
+	array_push($navObjects, $newNav);
+}
+
+
 ///////////////////////////////////////IMAGE UPLOAD FUNCTION////////////////////////////////////////////
 function uploadImage($inputField, $fileName, $existingFile)
 {
@@ -65,7 +79,10 @@ $fp = fopen('../config/_array.php', 'w');
 fwrite($fp, '<?php $rawFormValues =');
 fwrite($fp, '\''.$encodedFormData.'\';');
 fwrite($fp, chr(10).'$formValues = unserialize($rawFormValues);');
+fwrite($fp, chr(10).'$navOptions = '.'\''.join(',', $_POST['navOptions']).'\';');
 fclose($fp);
+
+include $masterPath.'/setup/_navBuilder.php';
 
 $successMessage = "Thanks!";
 

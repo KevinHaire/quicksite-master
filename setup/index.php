@@ -45,7 +45,7 @@
 	</form>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src='http://www.shopcitywebsites.com/assets/js/spectrum.js'></script>
+	<script src='http://www.shopcitywebsites.com/assets/js/setup.script.build.js'></script>
 
 </body>
 </html>

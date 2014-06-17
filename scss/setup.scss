@@ -246,6 +246,86 @@ HEADER
 
 
 
+
+
+/************
+NAV ITEMS
+************/
+
+.navigation {
+	padding:0 0 2% 0;
+}
+
+.navItem {
+	background:	#ffffff;
+	border:1px solid #808080;
+	padding:2% 15% 0 0;
+	position:relative;
+	margin-bottom:25px;
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+	label, input, input[type="select"] {
+		width:50%;
+		float:left;
+	}
+	input[type="number"] {
+		width:50px;
+	}
+}
+
+.exit {
+  width:30px;
+  height:30px;
+  border-radius:15px;
+  background:#ffffff;
+  border:1px solid #000000;
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  padding-left:10px;
+  &:hover {
+    cursor:pointer;
+  }
+  &:before {
+    content:'';
+    position:absolute;
+    transform:rotate(45deg);
+    top:12px;
+    left:4px;
+    width:20px;
+    height:4px;
+    background:#000000;
+  }
+  &:after {
+    content:'';
+    position:absolute;
+    transform:rotate(-45deg);
+    top:12px;
+    left:4px;
+    width:20px;
+    height:4px;
+    background:#000000;
+  }
+}
+
+
+.sortable-dragging {
+	opacity:.9;
+	// transform:rotate(deg);
+}
+
+.sortable-placeholder {
+	width:1000px;
+	height:147px;
+	border:1px dashed #808080;
+	margin-bottom:25px;
+}
+
+
+
 /************
 MIXINS / FONTS
 ************/

@@ -7,26 +7,16 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-           'setup/js/build/script.build.js':['setup/js/libs/*.js', 'setup/js/*.js'],
+           'setup/js/build/setup.script.build.js':['setup/js/libs/*.js', 'setup/js/*.js'],
            'js/build/script.build.js':['js/libs/*.js', 'js/script.js']
         }
       }
     },
 
-    // concat: {
-    //   options: {
-    //     separator: ';',
-    //   },
-    //   files: {
-    //      'setup/js/build/script.build.js':['setup/js/libs/*.js', 'setup/js/*.js'],
-    //      'js/build/script.build.js':['js/libs/*.js', 'js/script.js']
-    //   }
-    // },
-
     concat: {
       basic: {
         src: ['setup/js/libs/*.js', 'setup/js/*.js'],
-        dest: 'setup/js/build/script.build.js',
+        dest: 'setup/js/build/setup.script.build.js',
       },
       extras: {
         src: ['js/libs/*.js', 'js/script.js'],
@@ -72,7 +62,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['js/*.js'],
+        files: ['js/*.js', 'setup/js/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false,

@@ -3,7 +3,7 @@
 				<?php
 					if (!$formValues["password"]) {
 						echo '<br><label for="password"><b>Please set a password:</b></label>
-								  <input type="input" name="password" id="password" />';
+								  <input type="password" name="password" id="password" required />';
 					}
 					else {
 						echo '<input type="hidden" name="password" id="password" value="'.$formValues["password"].'" />';

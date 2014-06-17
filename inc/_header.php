@@ -44,17 +44,7 @@
 
 		<nav class="mainNav">
 			<div class="contain">
-				<ul>
-					<li class="<?php if ($page == "Home") {echo "on";} ?>"><a href="index.php">Home</a></li>					
-					<?php
-						$i = 0;
-						for (;$i < sizeof($navItems); $i++) {
-							if ($navItems[$i]["active"] == 'true'){
-								echo 	'<li><a href="'.$navItems[$i]["link"].'">'.$navItems[$i]["lable"].'</a></li>';
-							}
-						}
-					?>
-				</ul>
+				<?php include $sitePath.'/inc/_navList.php'; ?>
 			</div>
 		</nav>
 
