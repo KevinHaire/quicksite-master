@@ -611,6 +611,7 @@ NAV ITEMS
   padding: 2% 15% 0 0;
   position: relative;
   margin-bottom: 25px;
+  cursor: move;
 }
 .navItem:after {
   content: '';
@@ -666,7 +667,7 @@ NAV ITEMS
 
 .sortable-placeholder {
   width: 1000px;
-  height: 147px;
+  height: 186px;
   border: 1px dashed #808080;
   margin-bottom: 25px;
 }
