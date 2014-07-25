@@ -25,6 +25,7 @@
 								'<input value="'.$navObjects[$i]['title'].'" id="title'.$i.'" data-id="'.$i.'" type="text" />'.chr(13).
 								'<label for="">Type:</label>'.chr(13).
 								'<select id="type'.$i.'" data-id="'.$i.'" type="select" name="">'.chr(13).
+									'<option '.($navObjects[$i]['type'] == 'home'?'selected': '').' value="home">Home</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'photos'?'selected': '').' value="photos">Photos</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'webpage'?'selected': '').' value="webpage">Webpage</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'events'?'selected': '').' value="events">Events</option>'.chr(13).
@@ -36,6 +37,7 @@
 									'<option '.($navObjects[$i]['type'] == 'coupons'?'selected': '').' value="coupons">Coupons</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'reviews'?'selected': '').' value="reviews">Reviews</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'blog'?'selected': '').' value="blog">Blog</option>'.chr(13).
+									'<option '.($navObjects[$i]['type'] == 'external'?'selected': '').' value="external">External Link</option>'.chr(13).
 								'</select>'.chr(13).
 								'<label for="">Target:</label>'.chr(13).
 								'<select id="target'.$i.'" data-id="'.$i.'" type="select" name="">'.chr(13).
