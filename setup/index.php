@@ -1,4 +1,5 @@
 <?php
+	header("Access-Control-Allow-Origin: *");
 	include $sitePath.'/../config/_array.php';
 	include $masterPath.'/config/_vars.php';
 	if ($formValues["password"] && !$_COOKIE["login"]) {

@@ -1,4 +1,4 @@
-<?php 
+<?php
 include $sitePath.'/config/_array.php';
 include $masterPath.'/config/_vars.php';
 include $masterPath.'/inc/_redirect.php';
@@ -8,7 +8,7 @@ include $masterPath.'/inc/_redirect.php';
 <head>
 
 <?php
-$page = "Home"; 
+$page = "Home";
 include $masterPath.'/inc/_head.php';
 ?>
 </head>
@@ -38,9 +38,9 @@ include $masterPath.'/inc/_head.php';
 			<a class="sc-widget-posts sc-business-<?php echo $bizId; ?>" href="##">Posts</a>
 		</section>
 	</section>
-	
+
 	<?php include $masterPath.'/inc/_footer.php' ?>
-	
+
 </body>
 
 </html>
