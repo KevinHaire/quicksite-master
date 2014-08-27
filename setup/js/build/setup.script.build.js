@@ -2139,7 +2139,11 @@ $(document).ready(function() {
 											'<option value="_blank">_blank (new tab)</option>'+
 										'</select>'+
 										'<label for="">Parameters:</label>'+
-										'<input id="parameters'+i+'" data-id="'+i+'" type="text" />'+
+										'<input class="linkParams" id="parameters'+i+'" data-id="'+i+'" type="text" />'+
+										'<label for="">Page Title:</label>'+
+										'<input id="pageTitle'+i+'" data-id="'+i+'" type="text" />'+
+										'<label for="">Meta Description:</label>'+
+										'<textarea id="metaDescription'+i+'" data-id="'+i+'" type="text" /></textarea>'+
 										'<input id="hidden'+i+'" data-id="'+i+'" type="hidden" name="navOptions[]" />'+
 									'</li>';
 
@@ -2149,11 +2153,17 @@ $(document).ready(function() {
 		$('.exit').click(function() {
 			remove($(this));
 		})
-		$('input').on("keyup", function() {
-			updateNavOptions($(this));
-		})
+
 		$('select').change(function() {
 			updateNavParams($(this));
+		})
+		$('input, textarea').not('.linkParams').on('keyup', function () {
+			this.value = this.value.replace("'", "");
+			this.value = this.value.replace("|", "");
+			this.value = this.value.replace(",", "");
+		});
+		$('input, textarea').on("keyup", function() {
+			updateNavOptions($(this));
 		})
 		return false;
 	})
@@ -2164,11 +2174,18 @@ $(document).ready(function() {
 		remove($(this));
 	})
 
-	$('input').on("keyup", function() {
-		updateNavOptions($(this));
-	})
 	$('select').change(function() {
 		updateNavParams($(this));
+	})
+
+	$('input, textarea').not('.linkParams').on('keyup', function () {
+		this.value = this.value.replace("'", "");
+		this.value = this.value.replace("|", "");
+		this.value = this.value.replace(",", "");
+	});
+
+	$('input, textarea').on("keyup", function() {
+		updateNavOptions($(this));
 	})
 
 })// END OF DOCUMENT READY
@@ -2191,7 +2208,7 @@ function updateNavParams(obj) {
 	else {
 		$('#parameters'+id).val('');
 		$('#parameters'+id).attr('placeholder', '');
-	}	
+	}
 	updateNavOptions(obj);
 }
 
@@ -2202,12 +2219,16 @@ function updateNavOptions(obj) {
 	type = $('#type'+id).val();
 	target = $('#target'+id).val();
 	parameters = $('#parameters'+id).val();
+  pageTitle = $('#pageTitle'+id).val();
+	metaDescription = $('#metaDescription'+id).val();
 
 	$('#hidden'+id).val(
 		title + '|' +
 		type + '|' +
 		target + '|' +
-		parameters
+		parameters + '|' +
+		pageTitle + '|' +
+		metaDescription
 		);
 
 	console.log($('#hidden'+id).val());

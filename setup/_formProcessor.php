@@ -2,13 +2,15 @@
 
 $navObjects = array();
 
-for ($i=0; $i < sizeof($_POST['navOptions']) ; $i++) { 
+for ($i=0; $i < sizeof($_POST['navOptions']) ; $i++) {
 	$temp = explode('|', $_POST['navOptions'][$i]);
 	$newNav = array();
 	$newNav['title'] = $temp[0];
 	$newNav['type'] = $temp[1];
 	$newNav['target'] = $temp[2];
 	$newNav['parameters'] = $temp[3];
+	$newNav['pageTitle'] = $temp[4];
+	$newNav['metaDescription'] = $temp[5];
 	array_push($navObjects, $newNav);
 }
 
