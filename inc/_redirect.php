@@ -6,9 +6,9 @@
 		$berry   = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
 		$ipod    = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
 
-		if ($iphone || $android || $palmpre || $ipod || $berry == true) 
+		if ($iphone || $android || $palmpre || $ipod || $berry == true)
 		{
-		    echo "<script>window.location='http://www.".$shopDomain."/mobile/index.cfm/redirect/".$bizId."'</script>";
+		    echo "<script>window.location='http://".$shopDomain."/mobile/index.cfm/redirect/".$bizId."'</script>";
 		}
 	}
 ?>

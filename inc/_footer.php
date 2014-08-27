@@ -13,7 +13,7 @@
 				}
 				$footerLogoLocation = 'http://www.'.$shopDomain.'/style/footerlogo/'.$shopDomain.'.png';
 				if(get_http_response_code($footerLogoLocation) != "404"){
-					echo '<a href="http://www.'.$shopDomain.'" target="_blank"><img src="'.$footerLogoLocation.'" ></a>';
+					echo '<a href="http://'.$shopDomain.'" target="_blank"><img src="'.$footerLogoLocation.'" ></a>';
 				}else{
 				    echo '<a href="http://www.shopcity.com" target="_blank"><img src="images/scLogo.png" ></a>';
 				}
