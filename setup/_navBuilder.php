@@ -8,27 +8,28 @@ foreach($files as $file) {
 }
 
 for ($i=0; $i < sizeof($navObjects); $i++) {
-  $metaOutput = '<meta name="description" content="'.$navObjects[$i]['metaDescription'].'">';
+  if ($navObjects[$i]['metaDescription'] != '') {
+    $metaOutput = '<meta name="description" content="'.$navObjects[$i]['metaDescription'].'">';
+    if ($navObjects[$i]['type'] == 'home') {
+      $filename = '../inc/meta/Home.php';
+    } else {
+      $filename = '../inc/meta/'.$navObjects[$i]['title'].'.php';
+    }
 
-  if ($navObjects[$i]['type'] == 'home') {
-    $filename = '../inc/meta/Home.php';
-  } else {
-    $filename = '../inc/meta/'.$navObjects[$i]['title'].'.php';
-  }
+    $dirname = dirname($filename);
+    if (!is_dir($dirname))
+    {
+        mkdir($dirname, 0755, true);
+    }
 
-  $dirname = dirname($filename);
-  if (!is_dir($dirname))
-  {
-      mkdir($dirname, 0755, true);
+    if ($navObjects[$i]['type'] == 'home') {
+      $fp = fopen('../inc/meta/Home.php', 'w');
+    } else {
+      $fp = fopen('../inc/meta/'.$navObjects[$i]['title'].'.php', 'w');
+    }
+    fwrite($fp, $metaOutput);
+    fclose($fp);
   }
-
-  if ($navObjects[$i]['type'] == 'home') {
-    $fp = fopen('../inc/meta/Home.php', 'w');
-  } else {
-    $fp = fopen('../inc/meta/'.$navObjects[$i]['title'].'.php', 'w');
-  }
-  fwrite($fp, $metaOutput);
-  fclose($fp);
 }
 
 //CREATES FILES FOR TITLE TAGS
@@ -39,27 +40,30 @@ foreach($files as $file) {
 }
 
 for ($i=0; $i < sizeof($navObjects); $i++) {
-  $metaOutput = '<title>'.$navObjects[$i]['pageTitle'].'</title>';
+  if ($navObjects[$i]['pageTitle'] != '') {
+    $metaOutput = '<title>'.$navObjects[$i]['pageTitle'].'</title>';
 
-  if ($navObjects[$i]['type'] == 'home') {
-    $filename = '../inc/titles/Home.php';
-  } else {
-    $filename = '../inc/titles/'.$navObjects[$i]['title'].'.php';
+    if ($navObjects[$i]['type'] == 'home') {
+      $filename = '../inc/titles/Home.php';
+    } else {
+      $filename = '../inc/titles/'.$navObjects[$i]['title'].'.php';
+    }
+
+    $dirname = dirname($filename);
+    if (!is_dir($dirname))
+    {
+        mkdir($dirname, 0755, true);
+    }
+
+    if ($navObjects[$i]['type'] == 'home') {
+      $fp = fopen('../inc/titles/Home.php', 'w');
+    } else {
+      $fp = fopen('../inc/titles/'.$navObjects[$i]['title'].'.php', 'w');
+    }
+    fwrite($fp, $metaOutput);
+    fclose($fp);
   }
 
-  $dirname = dirname($filename);
-  if (!is_dir($dirname))
-  {
-      mkdir($dirname, 0755, true);
-  }
-
-  if ($navObjects[$i]['type'] == 'home') {
-    $fp = fopen('../inc/titles/Home.php', 'w');
-  } else {
-    $fp = fopen('../inc/titles/'.$navObjects[$i]['title'].'.php', 'w');
-  }
-  fwrite($fp, $metaOutput);
-  fclose($fp);
 }
 
 
