@@ -31,5 +31,10 @@
 				  <label for="metaDesc">Business Keywords</label>
 				  <input type="textarea" value="<?php echo $formValues["metaDesc"]; ?>" name="metaDesc" id="metaDesc" />
 				</div>
+				<div style="clear:both;"></div>
+				<div class="mobileRedirect">
+					<label for="mobileRedirect">Mobile Redirect</label>
+					<input name="mobileRedirect" type="checkbox" <?php if ($redirect == "true") {echo "checked";} ?>>
+				</div>
 			</div>
 		</section>

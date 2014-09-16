@@ -1,8 +1,11 @@
 <?php 
   
-  $metaDesc =           $formValues["metaDesc"]; //FILLES IN META DESCRIPTION IN THE HEAD
+  $metaDesc =           $formValues["metaDesc"]; //FILLS IN META DESCRIPTION IN THE HEAD
   // SET THIS TO TRUE FOR REDIRECT TO MOBILE SHOPCITY PROFILE FROM MOBILE DEVICES
-  $redirect =           'true';
+  $redirect = 'true';
+  if ($formValues["mobileRedirect"] == "false") {
+    $redirect = "false";
+  }
 
 
   // INFORMATION ABOUT BUSINESS USED TO GENERATE WEBTOOLS, PAGE TITLES AND REDIRECT LINK

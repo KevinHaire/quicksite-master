@@ -436,6 +436,13 @@ input[type="color"] {
   width: 100% !important;
 }
 
+.mobileRedirect {
+  text-align: center;
+}
+.mobileRedirect input[type="checkbox"] {
+  width: auto;
+}
+
 .enableSlider {
   margin-bottom: 4%;
 }

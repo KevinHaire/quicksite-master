@@ -68,6 +68,9 @@ uploadImage('bannerImgLink2', 'banner2', 'existingBannerImgLink2');
 uploadImage('bannerImgLink3', 'banner3', 'existingBannerImgLink3');
 uploadImage('bannerImgLink4', 'banner4', 'existingBannerImgLink4');
 
+if (!$_POST['mobileRedirect']) {
+	$_POST['mobileRedirect'] = "false";
+}
 
 $formData = serialize($_POST);
 $encodedFormData = convertQuotes($formData);
