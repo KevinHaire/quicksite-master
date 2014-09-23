@@ -1,8 +1,8 @@
 <?php
-	$referer = $_SERVER["HTTP_REFERER"];
-	$url = $_SERVER["HTTP_HOST"];
+	$currentUrl = "http://$_SERVER[HTTP_HOST]";
+	$fullSiteCookie = isset($_COOKIE["fullSite"]);
 
-	if (strpos($referer,'shop') !== false || strpos($referer, $url) !== false) {
+	if ($fullSiteCookie) {
 		$redirect = "false";
 	}
 
@@ -13,9 +13,22 @@
 		$berry   = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
 		$ipod    = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
 
-		if ($iphone || $android || $palmpre || $ipod || $berry == true)
-		{
-		    echo "<script>window.location='http://".$shopDomain."/mobile/index.cfm/redirect/".$bizId."'</script>";
+		if ($iphone || $android || $palmpre || $ipod || $berry == true) {
+			if (isset($_GET['page'])) {
+				echo "<script>window.location='".$currentUrl."'</script>";
+			} else {
+				include $masterPath.'/views/homeMobile.php';
+			}
+		}  else {
+			if (!isset($_GET['page'])) {
+				include $masterPath.'/views/home.php';
+			}
+		}
+	} else {
+		if (!isset($_GET['page'])) {
+			include $masterPath.'/views/home.php';
 		}
 	}
+
+
 ?>

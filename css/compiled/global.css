@@ -824,6 +824,14 @@ FOOTER
 .poweredBy span {
   font-size: 12px;
 }
+.poweredBy img {
+  max-width: 100%;
+}
+
+.removeCookie {
+  display: block;
+  margin: 1em 0 0 0;
+}
 
 .nivoSlider img {
   width: 100%;

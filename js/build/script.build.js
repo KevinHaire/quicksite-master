@@ -1,5 +1,9 @@
 $(window).load(function() {
 
+	$('.removeCookie').click(function() {
+		$.removeCookie('fullSite');
+	})
+
 	//CALL FUNCTION TO FIGURE OUT PADDING FOR NAV
 	fillNav();
 

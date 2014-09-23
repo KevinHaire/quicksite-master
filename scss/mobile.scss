@@ -1,0 +1,96 @@
+@import 'libs/normalize';
+@import 'libs/nivoSlider';
+@import 'libs/nivoTheme';
+
+img {
+	max-width:100%;
+}
+
+body {
+
+}
+
+.contain {
+	padding:1em;
+}
+
+.mainHeader {
+	text-align:center;
+	max-height:100px;
+	padding:1.5em 0;
+	img {
+		max-height:65px;
+		max-width:50%;
+	}
+}
+
+.homepageContent {
+	padding:1em;
+	h1 {
+		font-size:1.4em;
+		text-align:center;
+	}
+}
+
+.mainFooter {
+	text-align:center;
+	padding:2em 0;	
+	a {
+		margin-right:9%;
+		&:last-of-type {
+			margin-right:0;
+		}
+	}
+}
+
+.phoneNumber {
+	position:absolute;
+	right:4%;
+	top:1.8em;
+	font-size:1.5em;
+	text-decoration:none;
+}
+
+.nivoSlider {
+	width:100%;
+	img {
+		width:100%;
+	}
+}
+
+.bizInfo {
+	font-size:1.2em;
+	p {
+		margin:0 0 .3em 0;
+	}
+}
+
+.hoursTable {
+	font-size:.9em;
+	width:100%;
+	max-width:500px;
+	margin:1em auto 0 auto;
+	td {
+		text-align:right;
+		&:first-of-type {
+			text-align:left;
+		}
+	}
+}
+
+.poweredBy {
+	img {
+		max-width:30%;
+	}
+	p {
+		margin:1em 0 .3em 0;
+	}
+}
+
+.fullSiteContainer {
+	padding:1em 0 0 0;
+}
+
+.fullSite {
+	font-size:1em;
+}

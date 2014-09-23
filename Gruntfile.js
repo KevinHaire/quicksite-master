@@ -31,7 +31,8 @@ module.exports = function(grunt) {
         },
         files: {
           'css/compiled/global.css': 'scss/global.scss',
-          'css/compiled/setup.css': 'scss/setup.scss'
+          'css/compiled/setup.css': 'scss/setup.scss',
+          'css/compiled/mobile.css': 'scss/mobile.scss'
         }
       }
     },
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/prefixed/global.css': 'css/compiled/global.css',
-          'css/prefixed/setup.css': 'css/compiled/setup.css' 
+          'css/prefixed/setup.css': 'css/compiled/setup.css', 
+          'css/prefixed/mobile.css': 'css/compiled/mobile.css'
         }
       },
     },
@@ -52,7 +54,8 @@ module.exports = function(grunt) {
       combine: {
         files: {
           'css/minified/global.min.css': ['css/prefixed/global.css'],
-          'css/minified/setup.min.css': ['css/prefixed/setup.css']
+          'css/minified/setup.min.css': ['css/prefixed/setup.css'],
+          'css/minified/mobile.min.css': ['css/prefixed/mobile.css']
         }
       }
     },

@@ -15,7 +15,7 @@
 				if(get_http_response_code($footerLogoLocation) != "404"){
 					echo '<a href="http://'.$shopDomain.'" target="_blank"><img src="'.$footerLogoLocation.'" ></a>';
 				}else{
-				    echo '<a href="http://www.shopcity.com" target="_blank"><img src="images/scLogo.png" ></a>';
+				    echo '<a href="http://www.shopcity.com" target="_blank"><img src="http://www.shopcity.com/style/1001/newlogo_1000.png" ></a>';
 				}
 				if ($facebookLink){
 					echo '<iframe src="http://www.facebook.com/plugins/like.php?href='.$facebookLink.'&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;font&amp;colorscheme=light&amp;api_key=113050292188" scrolling="no" frameborder="0"  style="border:none; overflow:hidden; width:84px;height:21px;"></iframe>';
@@ -23,12 +23,18 @@
 					$curUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 					echo '<iframe src="http://www.facebook.com/plugins/like.php?href='.$curUrl.'&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;font&amp;colorscheme=light&amp;api_key=113050292188" scrolling="no" frameborder="0"  style="border:none; overflow:hidden; width:84px;height:21px;"></iframe>';
 				}
+
+				$fullSiteCookie = isset($_COOKIE["fullSite"]);
+				if ($fullSiteCookie) {
+					echo '<a class="removeCookie copyright" href="index.php">Mobile Site</a>';
+				}
 			?>
 		</div>
 	</footer>
 <!-- END OF FOOTER CONTENT -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://www.<?php echo $shopDomain; ?>/webtools/script/all.js.cfm"></script>
+<script src="http://www.shopcitywebsites.com/assets/js/mobile/jquery.cookie.js"></script>
 <script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/script.build.js"></script>
 <?php
 	if ($enableSlider == "true") {
