@@ -70,40 +70,43 @@ for ($i=0; $i < sizeof($navObjects); $i++) {
 $navOutput = '<ul>'.chr(10);
 for ($i=0; $i < sizeof($navObjects); $i++) {
   if ($navObjects[$i]['type'] == 'photos') {
-    $navLink = 'page.php?page=photos&pageType=gallery&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=photos&pageType=gallery&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'home') {
     $navLink = 'index.php';
   }
   else  if ($navObjects[$i]['type'] == 'webpage'){
-    $navLink = 'page.php?page='.$navObjects[$i]["title"].'&pageType=webpage&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page='.rawurlencode($navObjects[$i]["title"]).'&pageType=webpage&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'events') {
-    $navLink = 'page.php?page=events&pageType=events&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=events&pageType=events&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'newsletter') {
-    $navLink = 'page.php?page=newsletter&pageType=newsletter&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=newsletter&pageType=newsletter&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'posts') {
-    $navLink = 'page.php?page=posts&pageType=posts&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=posts&pageType=posts&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'contact') {
-    $navLink = 'page.php?page=contact&pageType=contact&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=contact&pageType=contact&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'cart') {
-    $navLink = 'page.php?page=cart&pageType=store&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=cart&pageType=store&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'giftCertificates') {
-    $navLink = 'page.php?page=gift%20certificates&pageType=gift&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=gift%20certificates&pageType=gift&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'coupons') {
-    $navLink = 'page.php?page=coupons&pageType=coupons&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=coupons&pageType=coupons&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'reviews') {
-    $navLink = 'page.php?page=reviews&pageType=reviews&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=reviews&pageType=reviews&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else if ($navObjects[$i]['type'] == 'blog') {
-    $navLink = 'page.php?page=blog&pageType=blog&pageName='.$navObjects[$i]['title'];
+    $navLink = 'page.php?page=blog&pageType=blog&pageName='.rawurlencode($navObjects[$i]['title']);
+  }
+  else if ($navObjects[$i]['type'] == 'directory') {
+    $navLink = 'page.php?page=directory&pageType=directory&pageName='.rawurlencode($navObjects[$i]['title']);
   }
   else {
     $navLink = '';

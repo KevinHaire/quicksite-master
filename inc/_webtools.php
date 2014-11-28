@@ -18,7 +18,7 @@
         echo '<a class="sc-widget-contact sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Contact Information</a>';
       }
       else if ($pageType == 'store') {
-        if ($showCat == '1') {$enableCat = ' sc-enable-categories';};
+        $enableCat = ' sc-enable-categories';
         echo '<a class="sc-widget-products sc-forceAutoStyle-1 sc-business-'.$bizId.$enableCat.' sc-category-'.$singleCat.'" href="##">Products</a>';
       }
       else if ($pageType == 'gift') {
@@ -32,5 +32,8 @@
       }
       else if ($pageType == 'blog') {
         echo '<a class="sc-widget-blog sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Blog</a>';
+      }
+      else if ($pageType == 'directory') {
+        echo '<a class="sc-widget-members sc-business-'.$bizId.'" href="##">Members</a>';
       }
     ?>

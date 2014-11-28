@@ -33,7 +33,7 @@
 	</footer>
 <!-- END OF FOOTER CONTENT -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://www.<?php echo $shopDomain; ?>/webtools/script/all.js.cfm"></script>
+<script type="text/javascript" src="http://www.<?php echo $shopDomain; ?>/webtools/script/allEnhanced.js.cfm"></script>
 <script src="http://www.shopcitywebsites.com/assets/js/mobile/jquery.cookie.js"></script>
 <script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/script.build.js"></script>
 <?php
