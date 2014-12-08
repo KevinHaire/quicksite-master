@@ -23,6 +23,7 @@
   $instagramLink =      $formValues["instagramLink"]; //INSTAGRAM LINK, LEAVE BLANK IF THEY DONT HAVE ONE
   $googleLink =         $formValues["googleLink"]; //GOOGLE+ LINK, LEAVE BLANK IF THEY DONT HAVE ONE
   $pinterestLink =      $formValues["pinterestLink"]; //PINTEREST LINK, LEAVE BLANK IF THEY DONT HAVE ONE
+  $youtubeLink =        $formValues["youtubeLink"];
 
 
   // BUILDS NAVIGATION

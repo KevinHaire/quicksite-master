@@ -696,6 +696,7 @@ HEADER
   height: 30px;
   overflow: hidden;
   margin-left: 10px;
+  padding-top: 5px;
 }
 
 .headerRight {

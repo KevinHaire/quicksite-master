@@ -66,7 +66,7 @@ $(document).ready(function() {
 		updateNavParams($(this));
 	})
 
-	$('input, textarea').not('.linkParams').on('keyup', function () {
+	$('input, textarea').not('.linkParams, #bizName').on('keyup', function () {
 		this.value = this.value.replace("'", "");
 		this.value = this.value.replace("|", "");
 		this.value = this.value.replace(",", "");

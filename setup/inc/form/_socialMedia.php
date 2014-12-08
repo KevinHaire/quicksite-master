@@ -8,13 +8,15 @@
 				  <input type="input" value="<?php echo $formValues["twitterLink"]; ?>" name="twitterLink" id="twitterLink" />
 					<label for="pinterestLink">Pinterest URL</label>
 				  <input type="input" value="<?php echo $formValues["pinterestLink"]; ?>" name="pinterestLink" id="pinterestLink" />
+				  <label for="youtubeLink">YouTube URL</label>
+				  <input type="input" value="<?php echo $formValues["youtubeLink"]; ?>" name="youtubeLink" id="youtubeLink" />
 				</div>
 				<div class="right">
 					<label for="facebookLink">Facebook URL</label>
 				  <input type="input" value="<?php echo $formValues["facebookLink"]; ?>" name="facebookLink" id="facebookLink" />
 					<label for="instagramLink">Instagram URL</label>
 				  <input type="input" value="<?php echo $formValues["instagramLink"]; ?>" name="instagramLink" id="instagramLink" />
-				  <label for="googleLink">Google +</label>
+				  <label for="googleLink">Google + URL</label>
 				  <input type="input" value="<?php echo $formValues["googleLink"]; ?>" name="googleLink" id="googleLink" />
 				</div>
 			</div>

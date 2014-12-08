@@ -16,6 +16,7 @@
 				<div class="headerRight">
 					<span><?php echo $bizPhone; ?></span>
 					<?php
+
 						if ($facebookLink) {
 							echo '<a href="'.$facebookLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconFb.png" alt=""></a>';
 						}
@@ -30,6 +31,9 @@
 						}
 						if ($googleLink) {
 							echo '<a href="'.$googleLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconGp.png" alt=""></a>';
+						}
+						if ($youtubeLink) {
+							echo '<a href="'.$youtubeLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconYt.png" alt=""></a>';	
 						}
 						if ($shopLink) {
 							echo '<a href="'.$shopLink.'" target="_blank"><img src="http://www.shopcitywebsites.com/assets/images/iconSc.png" alt=""></a>';
