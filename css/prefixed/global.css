@@ -1500,6 +1500,9 @@ img.rsImg {
   text-align: center;
   padding-left: 15px;
 }
+.productOptions img {
+  max-width: 100%;
+}
 .productOptions input {
   -webkit-appearance: none;
   outline: 0;

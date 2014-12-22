@@ -34,7 +34,7 @@
       }
 
       if ($pageType == 'store') {
-        include $masterPath.'/views/store/catList.php';
+        include $masterPath.'/views/store/productList.php';
       }
       else if ($pageType == 'productList') {
         include $masterPath.'/views/store/productList.php';
