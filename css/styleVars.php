@@ -105,3 +105,20 @@ body {
 .copyright {
   color: <?php echo $footerCopyrightColor; ?>;
 }
+
+.cartColor {
+  background: <?php echo $footerBgColor; ?>;
+}
+
+svg path,
+svg rect{
+  fill: <?php echo $navLinkColor; ?>;
+}
+
+.itemInfo {
+  color: <?php echo $mainTextColor; ?>;
+}
+
+.cartSideBar ul li a {
+  color: <?php echo $mainTextColor; ?>; 
+}

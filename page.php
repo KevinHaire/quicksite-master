@@ -1,7 +1,7 @@
 <?php 
-if (!isset($_GET["page"])) {
-	header('Location: index.php');
-}
+// if (!isset($_GET["page"])) {
+// 	header('Location: index.php');
+// }
 include $sitePath.'/config/_array.php';
 include $masterPath.'/config/_vars.php';
 include $masterPath.'/inc/_redirect.php';
@@ -16,7 +16,7 @@ include $masterPath.'/inc/_head.php';
 
 </head>
 
-<body>
+<body ng-app="qsCart">
 
 	<?php include $masterPath.'/inc/_header.php' ?>
 

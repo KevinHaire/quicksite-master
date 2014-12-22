@@ -1,0 +1,313 @@
+.cartSideBar {
+	width:25%;
+	float:left;
+	// background:#f2dca2;//use form styles
+	padding:15px;
+	ul {
+		li {
+			margin-bottom:10px;
+			a {
+
+			}
+		}
+	}
+}
+
+.searchBox {
+	max-width:100%;
+	margin-bottom:15px;
+}
+
+.cart75Content {
+	width:75%;
+	float:left;
+}
+
+.item {
+	width:25%;
+	height:250px;
+	float:left;
+	padding:3px;
+	&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+		padding-top:0;
+	} 
+}
+
+.innerItem {
+	// background:#f2dca2;
+	height:100%;
+	padding:10px;
+	a {
+		text-decoration:none;
+	}
+}
+
+.itemImg {
+	text-align:center;
+	height:160px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	img {
+		max-width:100%;
+		max-height:100%;
+	}
+}
+
+.itemInfo {
+	text-align:center;
+	h3 {
+		font-size:14px;
+		font-weight:normal;
+		margin-bottom:5px;
+	}
+}
+
+
+
+///////////////////////DETAILS PAGE
+
+.pageProductTitle {
+	text-align:center;
+	font-size:24px;
+}
+
+.productImages {
+	width:50%;
+	float:left;
+	min-height:1px;
+}
+
+.productDescription {
+	text-align:left;
+}
+
+.productOptions {
+	width:50%;
+	float:left;
+	min-height:1px;
+	text-align:center;
+	padding-left:15px;
+	h1 {
+		
+	}
+	input {
+		-webkit-appearance:none;
+		outline:0;
+		border:0;
+		background:#ffffff;
+		border-radius:.5em;
+		padding:.5em;
+	}
+	input[type="number"] {
+		width:15%;
+	}
+}
+
+.productOptionContainer {
+	padding:15px 0 0 0;
+	select {
+		// -webkit-appearance:none;
+		width:75%;
+		font-size:14px;
+		// padding:.5em;
+	}
+}
+
+.addToCart {
+	margin-top:15px;
+}
+
+.priceOnSale {
+	font-size:28px;
+}
+
+.priceRegular {
+
+}
+
+.price {
+	font-size:28px;
+}
+
+
+///////////////////////IMAGE GALLERY
+
+.galleryContainer {
+	// background:#000000;
+}
+
+.albumImage {
+	width:450px;
+	height:350px;
+	margin-bottom:10px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	padding:10px;
+	img {
+		max-width:100%;
+		max-height:340px;
+		display:block;
+		margin:auto;
+	}
+}
+
+.thumbWrapper {
+	width:450px;
+	overflow:auto;
+	padding:10px;
+	border-top:2px solid #808080;
+	// background:#808080;
+}
+
+.thumbList {
+	white-space:nowrap;
+	margin:0;
+	li {
+		display:inline;
+		padding:0 5px;
+		height:150px;
+		cursor:pointer;
+		img {
+			max-height:150px;
+			vertical-align:middle;
+		}
+		a {
+
+		}
+	}
+}
+
+////////////////////////CART
+
+.cartIcon {
+	visibility:hidden;
+	text-decoration:none !important;
+}
+
+.cartContainer {
+	font-size:16px;
+}
+
+.cartItem {
+	width:100%;
+	// background:#f4f4f4;
+	padding:10px;
+	margin-bottom:15px;
+	border-radius:.5em;
+	position:relative;
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+	.left {
+		width:85%;
+		float:left;
+		h1 {
+			margin-top:0;
+		}
+	}
+	.right {
+		width:15%;
+		float:left;
+		input {
+			width:50px;
+		}
+	}
+}
+
+.cartItemImg {
+	width:140px;
+	height:105px;
+	img {
+		max-height:100%;
+		max-width:100%;
+	}
+}
+
+.cartTotals {
+	width:25%;
+	float:right;
+}
+
+
+.removeItem {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: #fff;
+	border: 1px solid #000;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	padding-left: 10px;
+	z-index: 100;
+	transition: all .2s ease;
+	&:hover {
+		cursor:pointer;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		transform: rotate(45deg);
+		top: 12px;
+		left: 4px;
+		width: 20px;
+		height: 4px;
+		background: #000;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		transform: rotate(-45deg);
+		top: 12px;
+		left: 4px;
+		width: 20px;
+		height: 4px;
+		background: #000;
+	}
+}
+
+
+.ng-cloak {
+	display:none;
+}
+
+//////////////////////////////////CHECKOUT
+
+.billingInformation, .shippingInformation {
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+}
+
+.checkoutContainer {
+	select {
+		width:48%;
+		float:left;
+		margin-bottom:10px;
+		padding:10px;
+		&:nth-of-type(even) {
+			float:right;
+		}
+	}
+	input[type="checkbox"] {
+		margin:0 10px 0 0;
+		width:auto;
+	}
+	input {
+		width:48%;
+		float:left;
+		padding:10px;
+		border-radius:.5em;
+		border:1px solid #000000;
+		margin-bottom:10px;
+		&:nth-of-type(even) {
+			float:right;
+		}
+	}
+}

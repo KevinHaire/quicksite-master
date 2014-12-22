@@ -17,10 +17,6 @@
       else if ($pageType == 'contact') {
         echo '<a class="sc-widget-contact sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Contact Information</a>';
       }
-      else if ($pageType == 'store') {
-        $enableCat = ' sc-enable-categories';
-        echo '<a class="sc-widget-products sc-forceAutoStyle-1 sc-business-'.$bizId.$enableCat.' sc-category-'.$singleCat.'" href="##">Products</a>';
-      }
       else if ($pageType == 'gift') {
         echo '<a class="sc-widget-giftcertificates sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Gift Certificates</a>';
       }
@@ -36,4 +32,21 @@
       else if ($pageType == 'directory') {
         echo '<a class="sc-widget-members sc-business-'.$bizId.'" href="##">Members</a>';
       }
+
+      if ($pageType == 'store') {
+        include $masterPath.'/views/store/catList.php';
+      }
+      else if ($pageType == 'productList') {
+        include $masterPath.'/views/store/productList.php';
+      }
+      else if ($pageType == 'productDetail') {
+        include $masterPath.'/views/store/productDetail.php';
+      }
+      else if ($pageType == 'cart') {
+        include $masterPath.'/views/store/cart.php';
+      }
+      else if ($pageType == 'checkout') {
+        include $masterPath.'/views/store/checkout.php';
+      }
+
     ?>

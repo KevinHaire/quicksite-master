@@ -1,0 +1,36 @@
+- product list
+	- pageType=productList
+	- http://www.shopcity.com/webApps/api/productlist/index.cfm?categoryid=&listingid=
+
+- category list
+	- pageType=catList
+	- http://www.shopcity.com/webApps/api/microcats/index.cfm?listingid=&page=1&pagesize=
+
+- product detail
+	- pageType=productDetail
+	- http://www.shopcity.com/webApps/api/productdetails/index.cfm?productid=
+	- product title
+	- image gallery
+	- price
+		- if on sale show "sale price"
+		- if on sale show "regular price"
+	- if canship == 0 show "pick up only"
+	- if canship == 1 and is online == 1
+		- quantity box
+		- dropdown for product options
+		- add to cart button
+	- product description
+	- related products
+
+- cart
+	- pageType=cart
+	- http://www.shopcity.com/webApps/api/cart/index.cfm?cartid=&randomid=&listingid=
+	- change quantity
+		- change totals
+	- remove from cart
+		- if all items are removed change view to continue shopping button
+	- continue shopping
+
+- checkout
+	- pageType=checkout
+	- build form that sends info to shop server

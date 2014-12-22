@@ -12,7 +12,15 @@
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/css/global.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/css/global.min.css"/> -->
+<!-- REMOVE THIS!!!!!! -->
+<!-- REMOVE THIS!!!!!! -->
+<!-- REMOVE THIS!!!!!! -->
+<link rel="stylesheet" href="http://shopsites.kev/_quicksiteMasterFiles/css/minified/global.min.css">
+<!-- REMOVE THIS!!!!!! -->
+<!-- REMOVE THIS!!!!!! -->
+<!-- REMOVE THIS!!!!!! -->
+<!-- REMOVE THIS!!!!!! -->
 <link rel="stylesheet" type="text/css" href="css/styleVars.php"/>
 <?php
   if (!isset($_GET['pageName'])) {

@@ -14,13 +14,12 @@ module.exports = function(grunt) {
     },
 
     concat: {
-      basic: {
-        src: ['setup/js/libs/*.js', 'setup/js/*.js'],
-        dest: 'setup/js/build/setup.script.build.js',
-      },
-      extras: {
-        src: ['js/libs/*.js', 'js/script.js'],
-        dest: 'js/build/script.build.js',
+      basic_and_extras: {
+        files: {
+          'setup/js/build/setup.script.build.js': ['setup/js/libs/*.js', 'setup/js/*.js'],
+          'js/build/script.build.js': ['js/libs/*.js', 'js/script.js'],
+          'js/build/app.build.js': ['js/cart/*.js']
+        },
       },
     },
 
@@ -65,7 +64,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['js/*.js', 'setup/js/*.js'],
+        files: ['js/*.js', 'setup/js/*.js', 'js/cart/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false,
