@@ -38,7 +38,6 @@
 <script src="http://www.shopcitywebsites.com/assets/js/mobile/jquery.cookie.js"></script>
 <script src="http://www.shopcitywebsites.com/assets/js/script.build.js"></script>
 <script src="http://www.shopcitywebsites.com/assets/js/cart.js"></script>
-
 <?php
 	if ($enableSlider == "true") {
 		echo '<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/jquery.nivo.slider.js"></script>'.chr(13).chr(10).

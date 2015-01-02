@@ -53,6 +53,8 @@ qsCart.controller('productList', ['$scope', '$http', function($scope, $http) {
 	if (catId == ''){catId = 0};
   $http.get('http://www.shopcity.com/webApps/api/productlist/index.cfm?categoryid='+catId+'&listingid='+listingId+'')
     .then(function (response) {
+    $('#workingGif').hide();
+	console.log(response.data);
     $scope.productList = response.data;
   });
 }]);

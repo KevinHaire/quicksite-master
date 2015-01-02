@@ -1,4 +1,8 @@
 $(window).load(function() {
+	
+	if ($.cookie('cartId')) {
+		$('.cartIcon').css('visibility', 'visible');
+	}
 
 	$('.removeCookie').click(function() {
 		$.removeCookie('fullSite');

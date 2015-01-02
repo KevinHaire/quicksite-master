@@ -17,9 +17,10 @@ var qsCart = angular.module('qsCart', [
 );
 
 function getQueryString(name) {
+	name = name.toLowerCase();
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+	var results = regex.exec(location.search.toLowerCase());
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
@@ -44,10 +45,16 @@ qsCart.controller('catList', ['$scope', '$http', function($scope, $http) {
 }]);
 
 qsCart.controller('productList', ['$scope', '$http', function($scope, $http) {
-	var catId = getQueryString('catId');
+	if (getQueryString('singleCat') != '') {
+		var catId = getQueryString('singleCat');
+	} else {
+		var catId = getQueryString('catId');
+	}
 	if (catId == ''){catId = 0};
   $http.get('http://www.shopcity.com/webApps/api/productlist/index.cfm?categoryid='+catId+'&listingid='+listingId+'')
     .then(function (response) {
+    $('#workingGif').hide();
+	console.log(response.data);
     $scope.productList = response.data;
   });
 }]);
@@ -270,5 +277,3 @@ qsCart.controller('cart', ['$scope', '$http', function($scope, $http) {
 			}
 		});
 	});
-
-

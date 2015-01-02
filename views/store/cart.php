@@ -5,13 +5,13 @@
 			<div class="cartItem cartColor" ng-repeat="cartItem in singleCart.CARTITEMS">
 				<div class="removeItem" ng-click="removeItem(cartItem.CARTITEMID, $event, $index)"></div>
 				<div class="left">
-					<h1>{{cartItem.TITLE}}
-					({{cartItem.PRICE | currency}} each)</h1>
+					<h1 ng-bind-html="cartItem.TITLE"></h1>
+					<h1>{{cartItem.PRICE | currency}} each</h1>
 					<div class="cartItemImg">
 						<img ng-src="{{cartItem.THUMBIMAGESRC}}" alt="">
 					</div>
 					<p ng-repeat="selectedOption in cartItem.OPTIONS">
-						{{selectedOption.LABEL}}: {{selectedOption.VALUE}} ({{selectedOption.PRICEADJUSTMENT | currency}})
+						{{selectedOption.LABEL}}: {{selectedOption.VALUE}} - {{selectedOption.PRICEADJUSTMENT | currency}}
 						<input type="hidden" ng-model="selectedOption.PRICEADJUSTMENT">
 					</p>
 				</div>

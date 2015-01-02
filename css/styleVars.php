@@ -102,23 +102,37 @@ body {
   font-family: <?php echo $footerNavFont; ?>;
 }
 
-.copyright {
+.copyright, .poweredBy span {
   color: <?php echo $footerCopyrightColor; ?>;
 }
 
 .cartColor {
-  background: <?php echo $footerBgColor; ?>;
+  border:1px solid <?php echo $navColor; ?>;
+  <!-- background: <?php echo $footerBgColor; ?>; -->
 }
 
 svg path,
 svg rect{
-  fill: <?php echo $navLinkColor; ?>;
+  fill: <?php echo $phoneColor; ?>;
 }
 
 .itemInfo {
-  color: <?php echo $mainTextColor; ?>;
+  color: <?php echo $navColor; ?>;
+  border-top: 1px solid <?php echo $navColor; ?>;
 }
 
 .cartSideBar ul li a {
   color: <?php echo $mainTextColor; ?>; 
+}
+
+.itemInfo h3, .itemInfo span {
+  color: <?php echo $mainTextColor; ?>; 
+}
+
+.price, .productDescription h2, .priceOnSale {
+  color: <?php echo $h1Color; ?>; 
+}
+
+.price span {
+  color: <?php echo $mainTextColor; ?>;
 }

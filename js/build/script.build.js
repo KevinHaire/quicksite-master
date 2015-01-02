@@ -23646,6 +23646,10 @@ k.title)}catch(b){}})};c.stop=q;r=function(){return g(a.location.href)};p=functi
 a._i7:a.slider}),a.ev.on("rsAfterSizePropSet",function(){var b,c=a.st.visibleNearby;b=c.breakpoint&&a.width<c.breakpoint?c.breakpointCenterArea:c.centerArea;a._h?(a._b4*=b,a._i7.css({height:a._c4,width:a._b4/b}),a._d=a._b4*(1-b)/2/b):(a._c4*=b,a._i7.css({height:a._c4/b,width:a._b4}),a._d=a._c4*(1-b)/2/b);c.navigateByCenterClick||(a._q=a._h?a._b4:a._c4);c.center&&a._e1.css("margin-"+(a._h?"left":"top"),a._d)}))};d.rsModules.visibleNearby=d.rsProto._g7})(jQuery);
 
 $(window).load(function() {
+	
+	if ($.cookie('cartId')) {
+		$('.cartIcon').css('visibility', 'visible');
+	}
 
 	$('.removeCookie').click(function() {
 		$.removeCookie('fullSite');

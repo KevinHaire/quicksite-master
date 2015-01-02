@@ -12,7 +12,8 @@
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/css/global.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="http://www.shopcitywebsites.com/assets/css/global.min.css"/> -->
+<link rel="stylesheet" href="http://quicksitemaster.com/global.min.css">
 <link rel="stylesheet" type="text/css" href="css/styleVars.php"/>
 <?php
   if (!isset($_GET['pageName'])) {
