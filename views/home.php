@@ -19,13 +19,13 @@ include $masterPath.'/inc/_head.php';
 				}
 			?>
 			<?php
-				$siteHomepage = file_get_contents('http://www.shopcity.com/webtools/content2/?page=100&listingid='.$bizId);
-				$siteHomepageStripped = trim(strip_tags($siteHomepage));
-				if ($siteHomepageStripped == '') {
-					echo ("<p>To put content here, login to your profile and create a custom webpage with the title 'Website Homepage'.</p>");
-				} else {
+				// $siteHomepage = file_get_contents('http://www.shopcity.com/webtools/content2/?page=100&listingid='.$bizId);
+				// $siteHomepageStripped = trim(strip_tags($siteHomepage));
+				// if ($siteHomepageStripped == '') {
+				// 	echo ("<p>To put content here, login to your profile and create a custom webpage with the title 'Website Homepage'.</p>");
+				// } else {
 					echo '<a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-100" href="##">Website Homepage</a>';
-				}
+				// }
 			?>
 		</section>
 		<section class="newsfeed">

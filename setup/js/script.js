@@ -19,6 +19,7 @@ $(document).ready(function() {
 											'<option value="coupons">Coupons</option>'+
 											'<option value="reviews">Reviews</option>'+
 											'<option value="blog">Blog</option>'+
+											'<option value="directory">Member Directory</option>'+
 											'<option value="external">External Link</option>'+
 										'</select>'+
 										'<label for="">Target:</label>'+

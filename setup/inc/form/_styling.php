@@ -1,6 +1,7 @@
 		<section>
 			<div class="contain">
 				<h2>Styling and Colors</h2>
+
 				<h3>Global Styles</h3>
 				<div class="left">
 					<label for="bgColor">Background Color</label>
@@ -45,6 +46,8 @@
 				  </select>
 				  <label for="h1Color">H1 Color</label>
 				  <input type="text" class="color" value="<?php echo $formValues["h1Color"]; ?>" name="h1Color" id="h1Color" />
+				  <label for="cartAccent">Cart Accent</label>
+				  <input type="text" class="color" value="<?php echo $formValues["cartAccent"]; ?>" name="cartAccent" id="cartAccent" />
 				</div>
 				<div style="clear:both"></div>
 				<h3>Header Styles</h3>

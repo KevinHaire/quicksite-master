@@ -107,8 +107,7 @@ body {
 }
 
 .cartColor {
-  border:1px solid <?php echo $navColor; ?>;
-  <!-- background: <?php echo $footerBgColor; ?>; -->
+  border:1px solid <?php echo $cartAccent; ?>;
 }
 
 svg path,
@@ -117,8 +116,7 @@ svg rect{
 }
 
 .itemInfo {
-  color: <?php echo $navColor; ?>;
-  border-top: 1px solid <?php echo $navColor; ?>;
+  border-top: 1px solid <?php echo $cartAccent; ?>;
 }
 
 .cartSideBar ul li a {
@@ -135,4 +133,22 @@ svg rect{
 
 .price span {
   color: <?php echo $mainTextColor; ?>;
+}
+
+.thumbWrapper {
+  border-top:1px solid <?php echo $cartAccent; ?>;
+}
+
+.inquire button, .addToCart, .cartTotals button, .checkoutButton {
+  background: <?php echo $h1Color; ?>;
+  color: <?php echo $footerNavColor; ?>;
+}
+
+.inquireForm {
+  background: <?php echo $h1Color; ?>;
+}
+
+.sendInquiry {
+  background: <?php echo $bgColor; ?> !important;
+  color: <?php echo $h1Color; ?> !important;
 }

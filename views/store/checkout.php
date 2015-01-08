@@ -88,10 +88,10 @@
 			</div>
 
 			<h2>Shipping Information</h2>
-			<span>Pick-up in store</span>
+			<span><label for="pickUp">Pick-up in store</label></span>
 			<input id="pickUp" type="checkbox" name="pickUp" value="0">
 			<div class="sameAsBilling">
-				<span>Same as billing</span>
+				<span><label for="shipping_same_as_billing">Same as billing</label></span>
 				<input id="shipping_same_as_billing" type="checkbox" name="shipping_same_as_billing" value="0">
 			</div>
 			<br>

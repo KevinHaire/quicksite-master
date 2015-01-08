@@ -6,7 +6,7 @@
 								  <input type="password" name="password" id="password" required />';
 					}
 					else {
-						echo '<input type="hidden" name="password" id="password" value="'.$formValues["password"].'" />';
+						echo '<h2>Password</h2><input type="password" name="password" id="password" value="'.$formValues["password"].'" />';
 					}
 				?>
 				<h2>Business Setup</h2>

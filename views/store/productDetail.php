@@ -9,12 +9,14 @@
 
 
 <div ng-controller="productDetail" class="ng-cloak">
+	<input class="bizCity" type="hidden" value="<?php echo $bizCity ?>">
 	
 	<h1 class="pageProductTitle" ng-bind-html="productDetail.PRODUCT.TITLE"></h1>
 
 	<div ng-controller="catList" class="cartSideBar cartColor">
-		<input ng-model="catSearch" type="search" placeholder="Category Search" class="searchBox">
+		<!-- <input ng-model="catSearch" type="search" placeholder="Product Search" class="searchBox"> -->
 		<ul>
+			<li><a href="page.php?page=cart&pageType=store&pageName=Products">View All</a></li>
 			<li ng-repeat="cat in catList.MICROCATS">
 				<a href="page.php?page=productList&pageType=productList&catId={{cat.CATID}}">
 					{{cat.CATNAME}}
@@ -127,9 +129,20 @@
 		<!-- END OF QUANTITY / OPTIONS / ADD TO CART -->
 
 		<div ng-hide="productDetail.PRODUCT.PRICEDETAILS.ISONLINE" class="inquire">
-			<a href="page.php?page=contact&pageType=contact">
-				<button>Inquire</button>
-			</a>
+			<button class="inquireButton">Inquire</button>
+			<div class="inquireForm">
+				<form novalidate action="">
+					<input required id="listingId" type="hidden" name="listingId" value="<?php echo $bizId ?>">
+					<input required id="directoryId" type="hidden" name="directoryId" value="{{productDetail.PRODUCT.DIRECTORYID}}">
+					<input required id="productId" type="hidden" name="productId" value="{{productDetail.PRODUCT.PRODUCTID}}">
+					<input ng-model="name" required type="text" name="name" placeholder="Name">
+					<input ng-model="city" required type="text" name="city" placeholder="City">
+					<input ng-model="email" required type="email" name="email" placeholder="Email">
+					<input ng-model="phone" required type="phone" name="phone" placeholder="Phone Number">
+					<textarea ng-model="content" required name="content" id="" cols="30" rows="6" placeholder="Inquiry"></textarea>
+					<button class="sendInquiry" ng-click="sendInquiry()">Send</button>
+				</form>
+			</div>
 		</div>
 
 		<div ng-hide="productDetail.PRODUCT.SHIPDETAILS.CANSHIP">

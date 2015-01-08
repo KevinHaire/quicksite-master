@@ -1,59 +1,35 @@
 <?php 
   
   $metaDesc =           $formValues["metaDesc"]; //FILLS IN META DESCRIPTION IN THE HEAD
-  // SET THIS TO TRUE FOR REDIRECT TO MOBILE SHOPCITY PROFILE FROM MOBILE DEVICES
+  
   $redirect = 'true';
   if ($formValues["mobileRedirect"] == "false") {
     $redirect = "false";
   }
 
+  $bizName =            $formValues["bizName"];
+  $bizPhone =           $formValues["bizPhone"];
+  $bizCity =            $formValues["bizCity"];
+  $bizProvince =        $formValues["bizProvince"];
+  $shopDomain =         $formValues["shopDomain"];
+  $bizId =              $formValues["bizId"];
+  $logoUrl =            $formValues["logoUrl"];
 
-  // INFORMATION ABOUT BUSINESS USED TO GENERATE WEBTOOLS, PAGE TITLES AND REDIRECT LINK
-  $bizName =            $formValues["bizName"]; //BUSINESS NAME
-  $bizPhone =           $formValues["bizPhone"]; //BUSINESS PHONE NUMBER
-  $bizCity =            $formValues["bizCity"]; //THE CITY IN THE DOMAIN NAME
-  $bizProvince =        $formValues["bizProvince"]; //PROVINCE
-  $shopDomain =         $formValues["shopDomain"]; //THE DOMAIN EXTENSION (.COM, .CA)
-  $bizId =              $formValues["bizId"]; //BUISNESS ID
-  $logoUrl =            $formValues["logoUrl"]; // LOGO URL (CAN BE RELATIVE OR ABSOLUTE PATH)
-
-  $shopLink =           $formValues["shopLink"]; //LINK TO SHOPCITY PAGE
-  $facebookLink =       $formValues["facebookLink"]; //FACEBOOK LINK, LEAVE BLANK IF THEY DONT HAVE ONE
-  $twitterLink =        $formValues["twitterLink"]; //TWITTER LINK, LEAVE BLANK IF THEY DONT HAVE ONE
-  $instagramLink =      $formValues["instagramLink"]; //INSTAGRAM LINK, LEAVE BLANK IF THEY DONT HAVE ONE
-  $googleLink =         $formValues["googleLink"]; //GOOGLE+ LINK, LEAVE BLANK IF THEY DONT HAVE ONE
-  $pinterestLink =      $formValues["pinterestLink"]; //PINTEREST LINK, LEAVE BLANK IF THEY DONT HAVE ONE
+  $shopLink =           $formValues["shopLink"];
+  $facebookLink =       $formValues["facebookLink"];
+  $twitterLink =        $formValues["twitterLink"];
+  $instagramLink =      $formValues["instagramLink"];
+  $googleLink =         $formValues["googleLink"];
+  $pinterestLink =      $formValues["pinterestLink"]; 
   $youtubeLink =        $formValues["youtubeLink"];
 
-
-  // BUILDS NAVIGATION
-  $aboutUsNav = '';     
-    if (isset($formValues["aboutUsNav"])) {$aboutUsNav = "true";}
-  $photosNav = '';
-    if (isset($formValues["photosNav"])) {$photosNav = "true";}
-  $menuNav = '';
-    if (isset($formValues["menuNav"])) {$menuNav = "true";}
-  $marketplaceNav = '';     
-    if (isset($formValues["marketplaceNav"])) {$marketplaceNav = "true";}
-  $couponsNav = '';
-    if (isset($formValues["couponsNav"])) {$couponsNav = "true";}
-  $giftCertificateNav = '';
-    if (isset($formValues["giftCertificateNav"])) {$giftCertificateNav = "true";}
-  $eventsNav = '';
-    if (isset($formValues["eventsNav"])) {$eventsNav = "true";}
-  $reviewsNav = '';
-    if (isset($formValues["reviewsNav"])) {$reviewsNav = "true";}
-  $newsletterNav = '';
-    if (isset($formValues["newsletterNav"])) {$newsletterNav = "true";}
-  $blogNav = '';
-    if (isset($formValues["blogNav"])) {$blogNav = "true";}
-  $contactNav = '';
-    if (isset($formValues["contactNav"])) {$contactNav = "true";}
-  
-  
-  
   // BEGINING OF STYLE CONFIGURATION
-  $bgColor =              $formValues["bgColor"]; //BACKGROUND COLOR OF ENTIRE SITE
+  if (!$formValues["cartAccent"] || $formValues["cartAccent"] == ''){
+    $cartAccent = $formValues["navColor"];
+  } else {
+    $cartAccent = $formValues["cartAccent"];
+  }
+  $bgColor =              $formValues["bgColor"];
   $h1Color =              $formValues["h1Color"];
   $h1TextSize =           $formValues["h1TextSize"];
   $linkColor =            $formValues["linkColor"];

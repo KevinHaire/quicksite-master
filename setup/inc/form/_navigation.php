@@ -39,6 +39,7 @@
 									'<option '.($navObjects[$i]['type'] == 'coupons'?'selected': '').' value="coupons">Coupons</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'reviews'?'selected': '').' value="reviews">Reviews</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'blog'?'selected': '').' value="blog">Blog</option>'.chr(13).
+									'<option '.($navObjects[$i]['type'] == 'directory'?'selected': '').' value="directory">Member Directory</option>'.chr(13).
 									'<option '.($navObjects[$i]['type'] == 'external'?'selected': '').' value="external">External Link</option>'.chr(13).
 								'</select>'.chr(13).
 								'<label for="">Target:</label>'.chr(13).

@@ -1537,19 +1537,13 @@ img.rsImg {
   padding: 16.5px 15px;
   border-radius: 2px;
   border: 1px solid #cccccc;
-  text-align: center;
-}
-.productOptions select option {
-  text-align: center;
-  font-size: 20px;
 }
 
 .addToCart {
+  border: 0;
   padding: 13px 0;
-  background: #f09b00;
   width: 100%;
   outline: 0;
-  border: 1px solid #cccccc;
   border-radius: 2px;
   margin-top: 14px;
   color: #ffffff;
@@ -1603,7 +1597,6 @@ img.rsImg {
   width: 358px;
   overflow: auto;
   padding: 10px;
-  border-top: 2px solid #808080;
 }
 
 .thumbList {
@@ -1721,6 +1714,9 @@ img.rsImg {
   display: table;
   clear: both;
 }
+.billingInformation select, .shippingInformation select {
+  -webkit-appearance: none;
+}
 
 .checkoutContainer select {
   width: 48%;
@@ -1768,15 +1764,50 @@ img.rsImg {
   padding-top: 65px;
 }
 .inquire button {
+  border: 0;
   padding: 13px 0;
-  background: #f09b00;
   width: 100%;
   outline: 0;
-  border: 1px solid #cccccc;
   border-radius: 2px;
   margin-top: 14px;
   color: #ffffff;
   font-size: 20px;
+}
+
+.inquireForm {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  border-radius: 2px;
+}
+.inquireForm input {
+  width: 90%;
+  margin-bottom: .75em;
+  border: solid 1px #cccccc;
+}
+.inquireForm textarea {
+  -webkit-appearance: none;
+  outline: 0;
+  border: 0;
+  background: #fff;
+  border-radius: .5em;
+  padding: .5em;
+  resize: none;
+  width: 90%;
+  border: solid 1px #cccccc;
+}
+
+.inquireFormActive {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  height: 370px;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.sendInquiry {
+  width: 90% !important;
 }
 
 .productInfoOnSale h1 {
@@ -1797,6 +1828,28 @@ img.rsImg {
   right: 20px;
   top: 20px;
   pointer-events: none;
+}
+
+.cartTotals button {
+  border: 0;
+  padding: 13px 0;
+  width: 100%;
+  outline: 0;
+  border-radius: 2px;
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.checkoutButton {
+  border: 0;
+  padding: 13px 0;
+  width: 100%;
+  outline: 0;
+  border-radius: 2px;
+  display: block;
+  margin: 14px auto;
+  font-size: 20px;
+  width: 25%;
 }
 
 /***********
