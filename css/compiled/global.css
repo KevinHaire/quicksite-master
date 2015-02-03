@@ -1500,22 +1500,27 @@ img.rsImg {
   font-size: 24px;
 }
 
+.productRightSide {
+  width: 75%;
+  float: left;
+}
+
 .productImages {
-  width: 40%;
+  width: 53.4%;
   float: left;
   min-height: 1px;
   margin: 0 20px;
 }
 
 .productDescription {
-  width: 75%;
+  width: 100%;
   float: right;
   text-align: left;
   padding-left: 20px;
 }
 
 .productOptions {
-  width: 30%;
+  width: 40%;
   float: left;
   min-height: 1px;
   text-align: center;

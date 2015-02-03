@@ -59,12 +59,61 @@ qsCart.controller('productList', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
+qsCart.controller('resultsList', ['$scope', '$http', function($scope, $http) {
+	var searchTerm = $('.searchTerm').val();
+  $http.get('http://www.shopcity.com/webApps/api/productlist/index.cfm?listingid='+listingId+'&searchterm='+searchTerm+'')
+    .then(function (response) {
+    $('#workingGif').hide();
+	console.log(response.data);
+    $scope.productList = response.data;
+  });
+}]);
+
+
 qsCart.controller('productDetail', ['$scope', '$http', function($scope, $http) {
 	var productId = getQueryString('productId');
   $http.get('http://www.shopcity.com/webApps/api/productdetails/index.cfm?productid='+productId+'')
     .then(function (response) {
     console.log(response.data);
     $scope.productDetail = response.data;
+    var city = $('.bizCity').val();
+    var rawTitle = $scope.productDetail.PRODUCT.TITLE;
+    var title = rawTitle.replace('&quot;', '"');
+    title = title.replace('&amp;', '&');
+    document.title = title + ' in ' + city;
+
+    $('.inquireButton').click(function() {
+    	$('.inquireForm').toggleClass('inquireFormActive');
+    	if ($(this).text() == 'Inquire') {
+    		$(this).text('Cancel');
+    	} else {
+    		$(this).text('Inquire');
+    	}
+    })
+    $(".inquireForm form").submit(function(event){ 
+        event.preventDefault(); 
+    });
+    // BEGINING OF FORM SUBMISSION
+	$scope.sendInquiry = function() {
+		if ($('.inquireForm form').hasClass('ng-valid')) {
+			$.ajax({
+				url: 'http://www.shopcity.com/webApps/api/contact/index.cfm',
+				method: 'post',
+				data: $('.inquireForm form').serialize(),
+				success: function(response) {
+					$('.inquireButton').text('Inquiry Sent');
+					$('.inquireForm').toggleClass('inquireFormActive');
+				},
+				error: function(x,y,z) {
+					console.log(y);
+					console.log(z);
+				}
+			})
+		} else {
+			alert('Please fill out required fields');
+		}
+	};
+	// END OF FORM SUBMISSION
     $scope.currentImage = $scope.productDetail.PRODUCT;
     $scope.setCurrentImage = function(productImage) {
     	$scope.currentImage = productImage;
@@ -136,6 +185,8 @@ qsCart.controller('cart', ['$scope', '$http', function($scope, $http) {
 	    		})
 	    		itemWOptions = optionsTotal + $scope.cart.CARTS[0].CARTITEMS[$index].PRICE;
 	    		return itemWOptions * $scope.cart.CARTS[0].CARTITEMS[$index].QUANTITY;
+	    	} else {
+	    		return $scope.cart.CARTS[0].CARTITEMS[$index].PRICE * $scope.cart.CARTS[0].CARTITEMS[$index].QUANTITY;
 	    	}
 	    }
 

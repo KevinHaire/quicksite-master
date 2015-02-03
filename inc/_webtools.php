@@ -51,6 +51,12 @@
         else if ($pageType == 'checkout') {
           include $masterPath.'/views/store/checkout.php';
         }
+        else if ($pageType == 'results') {
+          include $masterPath.'/views/store/results.php';
+        }
+        else if ($pageType == 'singleCat') {
+          include $masterPath.'/views/store/singleCatProductList.php';
+        }
       }
 
 

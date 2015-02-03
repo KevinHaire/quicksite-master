@@ -34,7 +34,9 @@
 
 
 	<div class="cartSideBar cartColor">
-		<input ng-model="productSearch" type="search" placeholder="Product Search" class="searchBox">
+		<form action="page.php?page=searchresults&pageType=results" method="POST">
+			<input name="searchTerm" type="search" placeholder="Product Search" class="searchBox">	
+		</form>
 		<ul>
 			<li><a href="page.php?page=cart&pageType=store&pageName=Products">View All</a></li>
 			<li ng-repeat="cat in productList.ALTCATEGORIES.CATEGORIES">

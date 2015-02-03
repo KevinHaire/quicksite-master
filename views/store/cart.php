@@ -25,8 +25,8 @@
 		<div class="cartTotals">
 			<h1>Shipping: {{cart.CARTS[0].SUMMARY.TOTALSHIPPING | currency}}</h1>
 			<h1>Subtotal: {{getTotal() + cart.CARTS[0].SUMMARY.TOTALSHIPPING | currency}}</h1>
-			<h1>Taxes: {{(getTotal() + cart.CARTS[0].SUMMARY.TOTALSHIPPING) * .13 | currency}}</h1>
-			<h1>Total: {{(getTotal() + cart.CARTS[0].SUMMARY.TOTALSHIPPING) * 1.13 | currency}}</h1>
+			<h1>Taxes: {{(getTotal() + cart.CARTS[0].SUMMARY.TOTALSHIPPING) * cart.CARTS[0].CARTITEMS[0].ADJUSTMENTS[0].PERCENTAGE | currency}}</h1>
+			<h1>Total: {{(getTotal() + cart.CARTS[0].SUMMARY.TOTALSHIPPING) * (cart.CARTS[0].CARTITEMS[0].ADJUSTMENTS[0].PERCENTAGE + 1) | currency}}</h1>
 			<div class="button">
 				<button ng-click="checkout()">
 					checkout

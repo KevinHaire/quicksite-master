@@ -1,5 +1,6 @@
-<div ng-controller="productList" class="ng-cloak">
-
+<div ng-controller="resultsList" class="ng-cloak">
+	
+	<input class="searchTerm" type="hidden" value="<?php echo $_POST['searchTerm']; ?>">
 	<div id="workingGif">
 
 	  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -34,7 +35,9 @@
 
 
 	<div class="cartSideBar cartColor">
-		<input ng-model="productSearch" type="search" placeholder="Product Search" class="searchBox">
+		<form action="page.php?page=searchresults&pageType=results" method="POST">
+			<input name="searchTerm" type="search" placeholder="Product Search" class="searchBox">	
+		</form>
 		<ul>
 			<li><a href="page.php?page=cart&pageType=store&pageName=Products">View All</a></li>
 			<li ng-repeat="cat in productList.ALTCATEGORIES.CATEGORIES">
