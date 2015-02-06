@@ -15,7 +15,7 @@
 
 	<div ng-controller="catList" class="cartSideBar cartColor">
 		<form action="page.php?page=searchresults&pageType=results" method="POST">
-			<input name="searchTerm" type="search" placeholder="Product Search" class="searchBox">	
+			<input name="searchTerm" type="search" placeholder="Search" class="searchBox">	
 		</form>
 		<ul>
 			<li><a href="page.php?page=cart&pageType=store&pageName=Products">View All</a></li>
@@ -169,7 +169,7 @@
 		<div style="clear:both;"></div>
 
 		<div class="productDescription">
-			<h2>Product Description</h2>
+			<h2>Description</h2>
 			<p ng-bind-html="productDetail.PRODUCT.DESCRIPTION"></p>
 		</div>
 	</div>
