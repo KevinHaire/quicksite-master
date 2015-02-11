@@ -150,8 +150,12 @@
 
 			<p ng-show="productDetail.PRODUCT.PROMO"><b>{{productDetail.PRODUCT.PROMO}}</b></p>
 
-			<div ng-show="productDetail.PRODUCT.SHIPDETAILS.CANPICKUP">
+			<div ng-if="productDetail.PRODUCT.SHIPDETAILS.CANSHIP == '0' && productDetail.PRODUCT.SHIPDETAILS.CANPICKUP == '1'">
 				<p>Pick Up Only</p>
+			</div>
+
+			<div ng-if="productDetail.PRODUCT.SHIPDETAILS.CANSHIP == '1' && productDetail.PRODUCT.SHIPDETAILS.CANPICKUP == '1'">
+				<p>Pick Up or Delivery</p>
 			</div>
 
 			<div ng-hide="productDetail.PRODUCT.SHIPDETAILS.CANPICKUP">
