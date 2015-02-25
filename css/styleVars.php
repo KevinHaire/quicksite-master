@@ -11,6 +11,11 @@ h1 {
   font-size: <?php echo $h1TextSize ?>;
 }
 
+h2 {
+  color: <?php echo $h1Color ?>;
+  font-size:1.2em;
+}
+
 a {
   color: <?php echo $linkColor; ?>;
 }
@@ -28,44 +33,6 @@ body {
 .headerRight span {
   color: <?php echo $phoneColor; ?>;
   font-family: <?php echo $phoneFont; ?>;
-}
-
-.mainNav {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $navColor; ?>), color-stop(100%, <?php echo $lightNavColor; ?>));
-  background: -webkit-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
-  background: -moz-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
-  background: -o-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
-  background: linear-gradient(to bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
-  height: 50px;
-}
-
-.mainNav ul li {
-  height: 50px;
-  display: inline-block;
-  border-right: 1px solid <?php echo $navColor; ?>;
-  border-left: 1px solid <?php echo $lightNavColor; ?>;
-}
-
-.mainNav ul li:hover {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $darkerNavColor; ?>), color-stop(100%, <?php echo $darkNavColor; ?>));
-  background: -webkit-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: -moz-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: -o-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: linear-gradient(to bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-}
-
-
-.on {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $darkerNavColor; ?>), color-stop(100%, <?php echo $darkNavColor; ?>));
-  background: -webkit-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: -moz-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: -o-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
-  background: linear-gradient(to bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px); 
-}
-
-.mainNav ul li a {
-  color: <?php echo $navLinkColor; ?>;
-  font-family: <?php echo $navFont; ?>;
 }
 
 .about {
@@ -115,6 +82,22 @@ svg rect{
   fill: <?php echo $phoneColor; ?>;
 }
 
+.burg {
+  background: <?php echo $phoneColor; ?>;
+}
+
+.burg:after {
+  background: <?php echo $phoneColor; ?>;
+}
+
+.burg:before {
+  background: <?php echo $phoneColor; ?>;
+}
+
+.activeBurg {
+  background:transparent;
+}
+
 .itemInfo {
   border-top: 1px solid <?php echo $cartAccent; ?>;
 }
@@ -151,4 +134,88 @@ svg rect{
 .sendInquiry {
   background: <?php echo $bgColor; ?> !important;
   color: <?php echo $h1Color; ?> !important;
+}
+
+.contactSubmit {
+  background: <?php echo $h1Color; ?>;   
+}
+
+
+
+
+.headerTop {
+  border-bottom:1px solid <?php echo $darkNavColor; ?>;
+}
+
+.mainNav ul li {
+  background: <?php echo $lightNavColor; ?>;
+}
+
+.mainNav ul li a {
+  color: <?php echo $navLinkColor; ?>;
+  font-family: <?php echo $navFont; ?>;
+  border-bottom:1px solid <?php echo $darkNavColor; ?>;
+}
+
+.mainNav ul li:first-child a {
+  border-top:1px solid <?php echo $darkNavColor; ?>;
+}
+
+
+
+
+
+
+@media all and (min-width:768px) {
+
+  .headerTop {
+    border-bottom:0;
+  }
+
+  .mainNav {
+    background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $navColor; ?>), color-stop(100%, <?php echo $lightNavColor; ?>));
+    background: -webkit-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: -moz-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: -o-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: linear-gradient(to bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    height: 50px;
+  }
+
+  .mainNav ul li {
+    height: 50px;
+    display: inline-block;
+    border-right: 1px solid <?php echo $navColor; ?>;
+    border-left: 1px solid <?php echo $lightNavColor; ?>;
+    background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $navColor; ?>), color-stop(100%, <?php echo $lightNavColor; ?>));
+    background: -webkit-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: -moz-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: -o-linear-gradient(bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+    background: linear-gradient(to bottom, <?php echo $navColor; ?> 25px, <?php echo $lightNavColor; ?> 25px);
+  }
+
+  .mainNav ul li:first-child a {
+    border-top:0;
+  }
+
+  .mainNav ul li:hover {
+    background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $darkerNavColor; ?>), color-stop(100%, <?php echo $darkNavColor; ?>));
+    background: -webkit-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
+    background: -moz-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
+    background: -o-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
+    background: linear-gradient(to bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px);
+  }
+
+
+  .on {
+    background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, <?php echo $darkerNavColor; ?>), color-stop(100%, <?php echo $darkNavColor; ?>)) !important;
+    background: -webkit-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px) !important;
+    background: -moz-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px) !important;
+    background: -o-linear-gradient(bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px) !important;
+    background: linear-gradient(to bottom, <?php echo $darkerNavColor; ?> 25px, <?php echo $darkNavColor; ?> 25px) !important; 
+  }
+
+  .mainNav ul li a {
+    color: <?php echo $navLinkColor; ?>;
+    font-family: <?php echo $navFont; ?>;
+  }
 }

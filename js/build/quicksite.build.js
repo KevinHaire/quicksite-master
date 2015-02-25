@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc overview
- * @name qsCart
+ * @name quicksite
  * @description
- * # qsCart
+ * # quicksite
  *
  * Main module of the application.
  */
 
 
-var qsCart = angular.module('qsCart', [
+var quicksite = angular.module('quicksite', [
   'ngSanitize',
   'ngRoute'
   ]
@@ -37,14 +37,14 @@ var listingId = $('#listingId').val();
 
 
 
-qsCart.controller('catList', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('catList', ['$scope', '$http', function($scope, $http) {
    $http.get('http://www.shopcity.com/webApps/api/microcats/index.cfm?listingid='+listingId+'')
     .then(function (response) {
       $scope.catList = response.data;
     });
 }]);
 
-qsCart.controller('productList', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('productList', ['$scope', '$http', function($scope, $http) {
 	if (getQueryString('singleCat') != '') {
 		var catId = getQueryString('singleCat');
 	} else {
@@ -59,7 +59,7 @@ qsCart.controller('productList', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
-qsCart.controller('resultsList', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('resultsList', ['$scope', '$http', function($scope, $http) {
 	var searchTerm = $('.searchTerm').val();
   $http.get('http://www.shopcity.com/webApps/api/productlist/index.cfm?listingid='+listingId+'&searchterm='+searchTerm+'')
     .then(function (response) {
@@ -70,7 +70,7 @@ qsCart.controller('resultsList', ['$scope', '$http', function($scope, $http) {
 }]);
 
 
-qsCart.controller('productDetail', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('productDetail', ['$scope', '$http', function($scope, $http) {
 	var productId = getQueryString('productId');
   $http.get('http://www.shopcity.com/webApps/api/productdetails/index.cfm?productid='+productId+'')
     .then(function (response) {
@@ -121,7 +121,7 @@ qsCart.controller('productDetail', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
-qsCart.controller('addToCart', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('addToCart', ['$scope', '$http', function($scope, $http) {
   if ($.cookie('cartId')) {
   	$('#cartId').val($.cookie('cartId'));
   }
@@ -158,13 +158,9 @@ qsCart.controller('addToCart', ['$scope', '$http', function($scope, $http) {
 			alert('Please select all options');
 		}
 	};
-
-	
-
-
 }]);
 
-qsCart.controller('cart', ['$scope', '$http', function($scope, $http) {
+quicksite.controller('cart', ['$scope', '$http', function($scope, $http) {
 
 	if ($.cookie('cartId')) {
 		
@@ -233,9 +229,48 @@ qsCart.controller('cart', ['$scope', '$http', function($scope, $http) {
 	}
 }]);
 
+quicksite.controller('homepageContent',['$scope', '$http', function($scope, $http) {
+	$http.get('http://shopcity.com/webApps/api/webpage/?listingid='+listingId+'&pageid=100')
+	.then(function (response) {
+		$scope.wPageContent = response.data;
+    });
+	$http.get('http://www.shopcity.com/webApps/api/listing/?listingId='+listingId)
+	.then(function (response) {
+		$scope.bizInfo = response.data;
+		console.log(response.data);
+    });
+}]);
+
+quicksite.controller('loadWebpage',['$scope', '$http', function($scope, $http) {
+	var pageId = getQueryString('wPageId');
+	$http.get('http://shopcity.com/webApps/api/webpage/?listingid='+listingId+'&pageid='+pageId)
+	.then(function (response) {
+		$scope.wPageContent = response.data;
+    });
+}]);
 
 
-/////////////////////CEHCKOUT
+quicksite.controller('contactFormController', function ($scope, $http) {
+  $scope.submit = function(contactForm) {
+  	var directoryId = $('.directoryId').val();
+    if (contactForm.$valid) {
+      $http({
+        method  : 'POST',
+        url     : 'http://www.shopcity.com/webApps/api/contact/index.cfm?listingId='+listingId+'&directoryId='+directoryId,
+        data    : $.param($scope.formData),
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }).success(function(data){
+        console.log(data);
+        $scope.formData = {};
+        $('.contactSubmit').attr('value', 'Message sent!');
+      });
+    }
+  }
+});
+
+
+
+/////////////////////CHECKOUT
 	$('#shipping_same_as_billing').click(function() {
 		if($(this).is(':checked')) {
 			$(this).attr('value', '1');

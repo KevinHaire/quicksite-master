@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         files: {
           'setup/js/build/setup.script.build.js': ['setup/js/libs/*.js', 'setup/js/*.js'],
           'js/build/script.build.js': ['js/libs/*.js', 'js/script.js'],
-          'js/build/app.build.js': ['js/cart/*.js']
+          'js/build/quicksite.build.js': ['js/quicksite/*.js']
         },
       },
     },
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['js/*.js', 'setup/js/*.js', 'js/cart/*.js'],
+        files: ['js/*.js', 'setup/js/*.js', 'js/quicksite/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false,

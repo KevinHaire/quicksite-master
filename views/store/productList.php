@@ -62,5 +62,20 @@
 		</div>
 	</div>
 
+	<div class="cart100Content" ng-controller="catList">
+		<div ng-repeat="cat in catList.MICROCATS" class="item">
+			<div class="innerItem cartColor">
+				<a href="page.php?page=productList&pageType=singleCat&catId={{cat.CATID}}">
+					<div class="itemImg">
+						<img ng-src="{{cat.THUMBIMAGESRC}}" alt="{{cat.CATNAME}}">
+					</div>
+					<div class="itemInfo">
+						<h3>{{cat.CATNAME}}</h3>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<div style="clear:both;"></div>
 </div>

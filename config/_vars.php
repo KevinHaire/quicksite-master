@@ -1,4 +1,18 @@
 <?php 
+
+  $mode = 'dev';
+
+  if ($mode == 'dev') {
+    $assetDomain = 'quicksitemaster.kev';
+    $cssPath = '/css/minified/global.min.css';
+    $mainJsPath = '/js/build/script.build.js';
+    $cartJsPath = '/js/build/quicksite.build.js';
+  } else {
+    $assetDomain = 'www.shopcitywebsites.com/assets';
+    $cssPath = '/css/global.min.css';
+    $mainJsPath = '/assets/js/script.build.js';
+    $cartJsPath = '/assets/js/quicksite.build.js';
+  }
   
   $metaDesc =           $formValues["metaDesc"]; //FILLS IN META DESCRIPTION IN THE HEAD
   

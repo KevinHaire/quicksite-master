@@ -104,7 +104,8 @@ include $masterPath.'/inc/_mobileHead.php';
 	<?php
 		if ($enableSlider == "true") {
 			echo '<script type="text/javascript" src="http://www.shopcitywebsites.com/assets/js/jquery.nivo.slider.js"></script>'.chr(13).chr(10).
-					 '<script>$("#slider").nivoSlider();</script>'.chr(13).chr(10);
+				 '<script>$("#slider").nivoSlider();</script>'.chr(13).chr(10).
+				 '<script>$("#slider2").nivoSlider();</script>'.chr(13).chr(10);
 		}
 	?>
 	<script>

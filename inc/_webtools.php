@@ -6,7 +6,8 @@
           echo '<a class="sc-widget-photos sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-startingAlbumID-'.$galleryId.'" href="##">Photos</a>';
         }
         else  if ($pageType == 'webpage'){
-          echo '<a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-'.$wPageId.'" href="##">Webpage</a>';
+          // echo '<a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-'.$wPageId.'" href="##">Webpage</a>';
+          echo '<section ng-controller="loadWebpage" ng-bind-html="wPageContent.webpage.content"></section>';
         }
         else if ($pageType == 'events') {
           echo '<a class="sc-widget-events sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Events</a>';
@@ -18,7 +19,8 @@
           echo '<a class="sc-widget-posts sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Posts</a>';
         }
         else if ($pageType == 'contact') {
-          echo '<a class="sc-widget-contact sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Contact Information</a>';
+          // echo '<a class="sc-widget-contact sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Contact Information</a>';
+          include $masterPath.'/views/contact.php';
         }
         else if ($pageType == 'gift') {
           echo '<a class="sc-widget-giftcertificates sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Gift Certificates</a>';

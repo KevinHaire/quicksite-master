@@ -47,7 +47,7 @@
 		</ul>
 	</div>
 
-	<div class="cart75Content">
+	<div class="cart75Content mobile">
 		<div ng-repeat="product in productList.PRODUCTS | filter:productSearch" class="item">
 			<div class="innerItem cartColor">
 				<a href="page.php?page=productDetail&pageType=productDetail&productId={{product.PRODUCTID}}" title="{{product.TITLE}}">

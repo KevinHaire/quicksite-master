@@ -8,12 +8,17 @@ $(window).load(function() {
 		$.removeCookie('fullSite');
 	})
 
+	$('.burgWrapper').bind('click', function(){
+	  $('.burg').toggleClass('activeBurg');
+	  $('.mainNav').toggleClass('activeNav');
+	})
+
 	//CALL FUNCTION TO FIGURE OUT PADDING FOR NAV
-	fillNav();
+	// fillNav();
 
 	//CALL FUNCTION THAT VERTICALLY CENTERES LOGO
 	//IF ITS NOT BIGGER THAN 120PX
-	vertImage('.headerLeft img');
+	// vertImage('.headerLeft img');
 
 	//CALL FUNCTION TO PUT THE FOOTER AT THE BOTTOM OF THE PAGE IF
 	//THE CONTENT ISNT TALL ENOUGH TO PUSH IT THERE

@@ -1,22 +1,28 @@
 #workingGif {
   position:absolute;
   top:100px;
-  left:57%;
+  left:50%;
+  margin-left:-50px;
 }
 
 .cartSideBar {
-	width:25%;
-	float:left;
-	// background:#f2dca2;//use form styles
-	padding:15px;
-	ul {
-		li {
-			margin-bottom:10px;
-			a {
+	display:none;
+	@include breakpoint(mamaBear) {
+		display:block;
+		width:25%;
+		float:left;
+		// background:#f2dca2;//use form styles
+		padding:15px;
+		ul {
+			li {
+				margin-bottom:10px;
+				a {
 
+				}
 			}
-		}
+		}	
 	}
+	
 }
 
 .searchBox {
@@ -25,12 +31,26 @@
 }
 
 .cart75Content {
-	width:75%;
-	float:left;
+	display:none;
+	@include breakpoint(mamaBear) {
+		display:block;
+		width:75%;
+		float:left;
+	}
+}
+
+.cart100Content {
+	width:100%;
+	@include breakpoint(mamaBear) {
+		display:none;
+	}
 }
 
 .item {
-	width:25%;
+	width:50%;
+	@include breakpoint(mamaBear) {
+		width:25%;
+	}
 	height:250px;
 	float:left;
 	padding:3px;
@@ -51,9 +71,9 @@
 .itemImg {
 	text-align:center;
 	height:160px;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	padding-bottom:5px;
 	img {
 		max-width:100%;
@@ -80,27 +100,38 @@
 }
 
 .productRightSide {
-	width:75%;
-	float:left;
+	width:100%;
+	@include breakpoint(mamaBear) {
+		width:75%;
+		float:left;
+	}
 }
 
 .productImages {
-	width:53.4%;
-	float:left;
-	min-height:1px;
-	margin:0 20px;
+	width:100%;
+	@include breakpoint(mamaBear) {
+		width:53.4%;
+		float:left;
+		min-height:1px;
+		margin:0 20px;
+	}
 }
 
 .productDescription {
 	width:100%;
-	float:right;
 	text-align:left;
-	padding-left:20px;
+	@include breakpoint(mamaBear) {
+		padding-left:20px;
+		float:right;
+	}	
 }
 
 .productOptions {
-	width:40%;
-	float:left;
+	width:100%;
+	@include breakpoint(mamaBear) {
+		width:40%;
+		float:left;
+	}
 	min-height:1px;
 	text-align:center;
 	img {
@@ -160,7 +191,10 @@
 .price {
 	font-size:28px;
 	font-weight:bold;
-	margin-top:0;
+	margin-top:10px 0;
+	@include breakpoint(mamaBear) {
+		margin-top:0;
+	}
 	span {
 		font-size:14px; 
 		font-weight:normal;
@@ -176,12 +210,12 @@
 }
 
 .albumImage {
-	width:359px;
+	// width:359px;
 	height:350px;
 	margin-bottom:10px;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding:10px;
 	img {
 		max-width:100%;
@@ -192,7 +226,7 @@
 }
 
 .thumbWrapper {
-	width:358px;
+	// width:358px;
 	overflow:auto;
 	padding:10px;
 	// background:#808080;
@@ -421,6 +455,13 @@
 
 .sendInquiry {
 	width:90% !important;
+}
+
+.productInfoOnSale {
+	margin-top:1em;
+	@include breakpoint(mamaBear) {
+		margin-top:0;
+	}
 }
 
 .productInfoOnSale h1 {

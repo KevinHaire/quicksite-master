@@ -1,3 +1,21 @@
+@mixin breakpoint($point) {
+  @if $point == papaBear {
+    @media (min-width: 1000px) { @content; }
+  }
+  @else if $point == mamaBear {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == babyBear {
+    @media (min-width: 515px)  { @content; }
+  }
+}
+
+//NAV COLORS
+$navColor:       #3b97dc;
+$lightNavColor:  lighten($navColor, 5%);
+$darkNavColor:   darken($navColor, 5%);
+$darkerNavColor: darken($darkNavColor, 5%);
+
 .left {
 	float:left;
 }
@@ -11,10 +29,12 @@
 }
 
 .contain {
-	width:900px;
-	height:100%;
+	width:95%;
 	margin:auto;
-	position:relative;
+	position:relative;	
+	@media all and (min-width:920px) {
+		width:900px;
+	}
 }
 
 .clear {
@@ -25,8 +45,19 @@
 	margin:0px !important;
 }
 
+.mobile {
+	display:block !important;
+	@include breakpoint(mamaBear) {
+		display:none;
+	}
+}
+
 body {
 	// -webkit-font-smoothing: antialiased;
 	// -moz-font-smoothing: antialiased;
 	// -o-font-smoothing: antialiased;
+}
+
+img {
+	max-width:100% !important;
 }
