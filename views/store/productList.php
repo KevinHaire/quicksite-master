@@ -63,6 +63,20 @@
 	</div>
 
 	<div class="cart100Content" ng-controller="catList">
+		<div class="item">
+			<div class="innerItem cartColor">
+				<a href="page.php?page=productList&pageType=singleCat&catId=0">
+					<div class="itemImg">
+						<?php
+							echo '<img src="uploads/'.$logoUrl.'" alt="">';
+						?>
+					</div>
+					<div class="itemInfo">
+						<h3>All Products</h3>
+					</div>
+				</a>
+			</div>
+		</div>
 		<div ng-repeat="cat in catList.MICROCATS" class="item">
 			<div class="innerItem cartColor">
 				<a href="page.php?page=productList&pageType=singleCat&catId={{cat.CATID}}">

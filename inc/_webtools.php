@@ -6,8 +6,8 @@
           echo '<a class="sc-widget-photos sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-startingAlbumID-'.$galleryId.'" href="##">Photos</a>';
         }
         else  if ($pageType == 'webpage'){
-          // echo '<a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-'.$wPageId.'" href="##">Webpage</a>';
-          echo '<section ng-controller="loadWebpage" ng-bind-html="wPageContent.webpage.content"></section>';
+          echo '<div class="webpageWebtool"><a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-'.$wPageId.'" href="##">Webpage</a></div>';
+          echo '<section class="webpageApi" ng-controller="loadWebpage" ng-bind-html="wPageContent.webpage.content"></section>';
         }
         else if ($pageType == 'events') {
           echo '<a class="sc-widget-events sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Events</a>';

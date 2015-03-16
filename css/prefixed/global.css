@@ -1551,7 +1551,7 @@ img {
     width: 53.4%;
     float: left;
     min-height: 1px;
-    margin: 0 20px;
+    margin: 0 1em;
   }
 }
 
@@ -1640,7 +1640,7 @@ img {
 }
 
 .albumImage {
-  height: 350px;
+  height: 300px;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1656,9 +1656,22 @@ img {
   justify-content: center;
   padding: 10px;
 }
+.albumImage a {
+  max-width: -webkit-calc( 100% - 0.1px ) !important;
+  max-width: calc( 100% - 0.1px ) !important;
+}
+@media (min-width: 768px) {
+  .albumImage {
+    height: 350px;
+  }
+  .albumImage img {
+    max-height: 340px;
+  }
+}
 .albumImage img {
-  max-width: 100%;
-  max-height: 340px;
+  max-width: -webkit-calc( 100% - 0.1px ) !important;
+  max-width: calc( 100% - 0.1px ) !important;
+  max-height: 290px;
   display: block;
   margin: auto;
 }
@@ -1706,15 +1719,25 @@ img {
   clear: both;
 }
 .cartItem .left {
-  width: 85%;
+  width: 75%;
   float: left;
+}
+@media (min-width: 768px) {
+  .cartItem .left {
+    width: 85%;
+  }
 }
 .cartItem .left h1 {
   margin-top: 0;
 }
 .cartItem .right {
-  width: 15%;
+  width: 25%;
   float: left;
+}
+@media (min-width: 768px) {
+  .cartItem .right {
+    width: 15%;
+  }
 }
 .cartItem .right input {
   width: 50px;
@@ -1729,11 +1752,6 @@ img {
   max-width: 100%;
 }
 
-.cartTotals {
-  width: 25%;
-  float: right;
-}
-
 .removeItem {
   width: 30px;
   height: 30px;
@@ -1741,12 +1759,18 @@ img {
   background: #fff;
   border: 1px solid #000;
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -25px;
+  right: -10px;
   padding-left: 10px;
   z-index: 100;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+}
+@media (min-width: 768px) {
+  .removeItem {
+    top: -5px;
+    right: -5px;
+  }
 }
 .removeItem:hover {
   cursor: pointer;
@@ -1849,6 +1873,7 @@ img {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   border-radius: 2px;
+  font-size: 14px !important;
 }
 .inquireForm input {
   width: 90%;
@@ -1870,9 +1895,14 @@ img {
 .inquireFormActive {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
-  height: 370px;
+  height: 385px;
   margin-top: 1em;
   padding-top: 1em;
+}
+@media (min-width: 768px) {
+  .inquireFormActive {
+    height: 370px;
+  }
 }
 
 .sendInquiry {
@@ -1908,6 +1938,10 @@ img {
   pointer-events: none;
 }
 
+.cartTotals {
+  width: 100%;
+  float: right;
+}
 .cartTotals button {
   border: 0;
   padding: 13px 0;
@@ -1916,6 +1950,11 @@ img {
   border-radius: 2px;
   margin-top: 14px;
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  .cartTotals {
+    width: 25%;
+  }
 }
 
 .checkoutButton {
@@ -1964,11 +2003,12 @@ HEADER
 .headerTop {
   border-bottom: 1px solid #3b97dc;
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
 @media (min-width: 768px) {
   .headerTop {
     border-bottom: 0;
+    height: 120px;
   }
 }
 
@@ -1989,22 +2029,24 @@ HEADER
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 120px;
+  height: 100px;
 }
 .headerLeft img {
-  width: 100%;
   max-width: 100%;
-  max-height: 120px;
+  max-height: 97px;
 }
 @media (min-width: 768px) {
   .headerLeft {
     width: 66.666666%;
     min-height: 1px;
     float: left;
-    padding-right: 15px;
+    padding: 5px 15px 5px 0;
+    text-align: left;
+    height: 100px;
   }
   .headerLeft img {
     width: auto;
+    max-height: 110px;
   }
 }
 
@@ -2141,7 +2183,7 @@ HEADER
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 5px;
 }
 @media (min-width: 768px) {
@@ -2156,7 +2198,7 @@ HEADER
 
 .burgWrapper {
   position: absolute;
-  top: 30px;
+  top: 45px;
   right: 5px;
 }
 @media (min-width: 768px) {
@@ -2441,6 +2483,21 @@ FOOTER
   .contactForm input[type="submit"] {
     width: 190px;
     float: right;
+  }
+}
+
+.webpageWebtool {
+  display: none;
+}
+@media (min-width: 768px) {
+  .webpageWebtool {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .webpageApi {
+    display: none;
   }
 }
 
