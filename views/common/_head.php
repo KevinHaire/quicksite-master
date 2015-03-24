@@ -18,20 +18,18 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <?php
-  if ($_GET['pageType'] != 'productDetail') {
-    if (!isset($_GET['pageName'])) {
-      if (file_exists('inc/titles/Home.php')) {
-        include 'inc/titles/Home.php';
-      } else {
-        echo '<title>'.$bizName.' | '.$bizCity.' | '.$bizProvince.' | '.$page.'</title>';
-      }
+  if (!isset($_GET['pageName'])) {
+    if (file_exists('inc/titles/Home.php')) {
+      include 'inc/titles/Home.php';
+    } else {
+      echo '<title>'.$bizName.' | '.$bizCity.' | '.$bizProvince.' | '.$page.'</title>';
     }
-    if (isset($_GET['pageName'])) {
-      if (file_exists('inc/titles/'.isset($_GET['pageName']).'.php')) {
-        include 'inc/titles/'.isset($_GET['pageName']).'.php';
-      } else {
-        echo '<title>'.$bizName.' | '.$bizCity.' | '.$bizProvince.' | '.$page.'</title>';
-      }
+  }
+  if (isset($_GET['pageName'])) {
+    if (file_exists('inc/titles/'.$_GET['pageName'].'.php')) {
+      include 'inc/titles/'.$_GET['pageName'].'.php';
+    } else {
+      echo '<title>'.$bizName.' | '.$bizCity.' | '.$bizProvince.' | '.$page.'</title>';
     }
   }
 ?>
