@@ -1,6 +1,6 @@
 <?php 
 
-  $mode = '';
+  $mode = 'dev';
 
   if ($mode == 'dev') {
     $assetDomain = 'quicksitemaster.kev';

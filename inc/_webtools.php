@@ -2,10 +2,10 @@
       if (isset($_GET['productId']) || isset($_GET['productid'])) {
         include $masterPath.'/views/store/productDetail.php';
       } else {
-        if ($pageType == 'gallery') {
-          echo '<a class="sc-widget-photos sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-startingAlbumID-'.$galleryId.'" href="##">Photos</a>';
-        }
-        else  if ($pageType == 'webpage'){
+        // if ($pageType == 'gallery') {
+        //   echo '<a class="sc-widget-photos sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-startingAlbumID-'.$galleryId.'" href="##">Photos</a>';
+        // }
+        if ($pageType == 'webpage'){
           echo '<div class="webpageWebtool"><a class="sc-widget-content sc-forceAutoStyle-1 sc-business-'.$bizId.' sc-page-'.$wPageId.'" href="##">Webpage</a></div>';
           echo '<section class="webpageApi" ng-controller="loadWebpage" ng-bind-html="wPageContent.webpage.content"></section>';
         }
@@ -29,7 +29,8 @@
           echo '<a class="sc-widget-coupons sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Coupons</a>';
         }
         else if ($pageType == 'reviews') {
-          echo '<a class="sc-widget-testimonials sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Reviews</a>';
+          // echo '<a class="sc-widget-testimonials sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Reviews</a>';
+          include $masterPath.'/views/reviews.php';
         }
         else if ($pageType == 'blog') {
           echo '<a class="sc-widget-blog sc-forceAutoStyle-1 sc-business-'.$bizId.'" href="##">Blog</a>';
@@ -59,8 +60,11 @@
         else if ($pageType == 'singleCat') {
           include $masterPath.'/views/store/singleCatProductList.php';
         }
+        else if ($pageType == 'gallery') {
+          include $masterPath.'/views/gallery.php';
+        }
+        else if ($pageType == 'singlegallery') {
+          include $masterPath.'/views/singleGallery.php';
+        }
       }
-
-
-
     ?>

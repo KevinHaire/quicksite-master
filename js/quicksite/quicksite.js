@@ -31,12 +31,6 @@ function cartCookiesAdd() {
 
 var listingId = $('#listingId').val();
 
-
-
-
-
-
-
 quicksite.controller('catList', ['$scope', '$http', function($scope, $http) {
    $http.get('http://www.shopcity.com/webApps/api/microcats/index.cfm?listingid='+listingId+'')
     .then(function (response) {
@@ -221,10 +215,8 @@ quicksite.controller('cart', ['$scope', '$http', function($scope, $http) {
 	    	if ($scope.cart.CARTS[0].CARTITEMS.length == 0) {
 	    		$.removeCookie('cartId');
 	    		$.removeCookie('randomId');
-
 	    	}
 	    }
-
 	  });
 	}
 }]);
@@ -267,6 +259,24 @@ quicksite.controller('contactFormController', function ($scope, $http) {
     }
   }
 });
+
+
+quicksite.controller('reviews', function ($scope, $http) {
+	$http.get('http://www.shopcity.com/webApps/api/reviews/?listingId='+listingId)
+	.then(function (response) {
+		$scope.reviews = response.data;
+		console.log(response.data);
+    });
+});
+
+
+
+
+
+ 
+
+
+
 
 
 
