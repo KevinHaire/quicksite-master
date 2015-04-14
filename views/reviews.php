@@ -12,6 +12,8 @@
 	    </div>
 	</script>
 
-    <div class="review" ng-repeat="review in reviews" ng-include="'reviewTree'"></div>
-	
+	<div class="review" dir-paginate="review in reviews | itemsPerPage:6" ng-include="'reviewTree'"></div>
+    <!-- <div class="review" ng-repeat="review in reviews" ng-include="'reviewTree'"></div> -->
+	<dir-pagination-controls max-size="6" template-url="http://shopcitywebsites.com/assets/templates/dirPagination.tpl.html"></dir-pagination-controls>
+
 </div>

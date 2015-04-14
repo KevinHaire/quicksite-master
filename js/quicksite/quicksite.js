@@ -12,9 +12,15 @@
 
 var quicksite = angular.module('quicksite', [
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'angularUtils.directives.dirPagination'
   ]
-);
+).config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'http://shopcitywebsites.com/assets/templates/**'
+  ]);
+});
 
 function getQueryString(name) {
 	name = name.toLowerCase();

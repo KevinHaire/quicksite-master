@@ -18,3 +18,41 @@
 		margin-top:4px;
 	}
 }
+
+.pagination {
+	margin-bottom:3em;
+	padding-top:2em;
+	display:flex;
+	li {
+		flex-grow:1;
+		&:first-child {
+			a {
+				border-radius:.5em 0 0 .5em;
+			}
+		}
+		&:last-child {
+			a {
+				border-right:1px solid black;//stylevars
+				border-radius:0 .5em .5em 0;
+			}
+		}
+		a {
+			padding:1em;
+			border:1px solid black;//stylevars
+			border-right:0;
+			display:block;
+			text-align:center;
+			font-size:1.4em;
+			text-decoration:none;
+			&:hover {
+				background:#fafafa;//stylevars
+			}
+		}
+	}
+}
+
+.active {
+	a {
+		background:darken(#fafafa, 2);//stylevars
+	}
+}

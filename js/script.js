@@ -13,6 +13,10 @@ $(window).load(function() {
 	  $('.mainNav').toggleClass('activeNav');
 	})
 
+	$('.closeUpdateBrowser').click(function() {
+		$('.updateBrowser').remove();
+	})
+
 	//CALL FUNCTION TO FIGURE OUT PADDING FOR NAV
 	// fillNav();
 

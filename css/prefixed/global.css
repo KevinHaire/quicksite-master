@@ -2159,6 +2159,44 @@ img {
   margin-top: 4px;
 }
 
+.pagination {
+  margin-bottom: 3em;
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pagination li {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
+}
+.pagination li:first-child a {
+  border-radius: .5em 0 0 .5em;
+}
+.pagination li:last-child a {
+  border-right: 1px solid black;
+  border-radius: 0 .5em .5em 0;
+}
+.pagination li a {
+  padding: 1em;
+  border: 1px solid black;
+  border-right: 0;
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+.pagination li a:hover {
+  background: #fafafa;
+}
+
+.active a {
+  background: whitesmoke;
+}
+
 /***********
 GLOBAL
 ***********/
@@ -2181,6 +2219,30 @@ h1 {
 /***********
 HEADER
 ***********/
+.updateBrowser {
+  text-align: center;
+  background: #808080;
+  padding: .5em;
+  position: relative;
+}
+.updateBrowser p {
+  color: #ffffff;
+}
+.updateBrowser a {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+.closeUpdateBrowser {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #ffffff;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
 .mainHeader {
   width: 100%;
 }

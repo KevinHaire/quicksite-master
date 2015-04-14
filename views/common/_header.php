@@ -1,5 +1,16 @@
 	<header class="mainHeader">
-
+		<!--[if IE 8]>
+		<div class="updateBrowser">
+			<div class="closeUpdateBrowser">x</div>
+			<p>This website was designed to work on IE10 + please update your browser <a href="http://outdatedbrowser.com/" target="_blank">here</a>.</p>
+		</div>
+		<![endif]-->
+		<!--[if IE 9]>
+		<div class="updateBrowser">
+			<div class="closeUpdateBrowser">x</div>
+			<p>This website was designed to work on IE10 + please update your browser <a href="http://outdatedbrowser.com/" target="_blank">here</a>.</p>
+		</div>
+		<![endif]-->
 		<section class="headerTop">
 			<div class="contain">
 				<div class="callButton" ng-controller="homepageContent">

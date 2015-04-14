@@ -34,6 +34,30 @@ h1 {
 HEADER
 ***********/
 
+.updateBrowser {
+	text-align:center;
+	background:#808080;
+	padding:.5em;
+	position:relative;
+	p {
+		color:#ffffff;
+	}
+	a {
+		color:#ffffff !important;
+		text-decoration:underline !important;
+	}
+}
+
+.closeUpdateBrowser {
+	width:20px;
+	position:absolute;
+	right:10px;
+	top:10px;
+	color:#ffffff;
+	font-size:1.7em;
+	cursor:pointer;
+}
+
 .mainHeader {
 	width:100%;
 	@include breakpoint(mamaBear) {
